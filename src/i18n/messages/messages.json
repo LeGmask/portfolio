@@ -2,6 +2,11 @@
   {
     "id": "Home.welcome",
     "defaultMessage": "Edit <code>src/App.js</code> and save to reload.",
-    "filepath": "src/App.js"
+    "filepath": "src/pages/exemple.js"
+  },
+  {
+    "id": "notFound.404",
+    "defaultMessage": "Bip, Bop, Bioup ? Vous vous êtes perdu ?",
+    "filepath": "src/pages/notFound.js"
   }
 ]

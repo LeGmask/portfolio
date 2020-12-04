@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
 
-import logo from "./images/logo.svg";
-import "./App.scss";
+import exemple from "./pages/exemple";
+import notFound from "./pages/notFound";
 
 import { IntlProvider } from "react-intl";
 import translations from "./i18n/locales";
@@ -39,25 +40,10 @@ class App extends Component {
   render() {
     return (
       <IntlProvider locale={this.state.locale} messages={this.state.messages}>
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-              <FormattedMessage
-                id="Home.welcome"
-                defaultMessage="Edit <code>src/App.js</code> and save to reload."
-              />
-            </p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </header>
-        </div>
+        <Router>
+          <Route path="/" component={exemple} exact />
+          <Route component={notFound} />
+        </Router>
       </IntlProvider>
     );
   }
