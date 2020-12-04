@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { FormattedMessage } from "react-intl";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import exemple from "./pages/exemple";
 import notFound from "./pages/notFound";
