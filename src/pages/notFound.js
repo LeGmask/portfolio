@@ -7,11 +7,9 @@ import "../App.scss";
 export default class notFound extends Component {
   constructor(props) {
     super(props);
+    document.title = "404";
   }
 
-  componentDidMount() {
-    document.title = "Zut - 404";
-  }
   render() {
     return (
       <div className="App">

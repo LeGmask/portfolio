@@ -7,9 +7,6 @@ import "../App.scss";
 export default class exemple extends Component {
   constructor(props) {
     super(props);
-  }
-
-  componentDidMount() {
     document.title = "Exemple";
   }
 
