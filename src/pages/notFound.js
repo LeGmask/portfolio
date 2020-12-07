@@ -4,7 +4,7 @@ import { FormattedMessage } from "react-intl";
 import logo from "../images/logo.svg";
 import "../App.scss";
 
-export default class notFound extends Component {
+export default class NotFound extends Component {
   constructor(props) {
     super(props);
     document.title = "404";
