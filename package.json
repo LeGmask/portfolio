@@ -21,20 +21,23 @@
     "react-intl-cra": "^0.3.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "remark-emoji": "^2.1.0",
+    "remark-images": "^2.0.0",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject",
     "extract:messages": "react-intl-cra src/**/*.{js,jsx} -o src/i18n/messages/messages.json",
     "manage:translations": "node ./translationRunner.js"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:mdx/recommended"
     ]
   },
   "browserslist": {
@@ -50,13 +53,17 @@
     ]
   },
   "devDependencies": {
+    "@mdx-js/loader": "^1.6.22",
+    "customize-cra": "^1.0.0",
     "eslint": "^7.14.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-node": "^4.1.0",
     "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-mdx": "^1.8.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.2.1",
+    "react-app-rewired": "^2.1.7",
     "react-intl-translations-manager": "^5.0.3"
   }
 }

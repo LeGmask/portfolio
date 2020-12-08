@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import exemple from "./pages/exemple";
-import notFound from "./pages/notFound";
+import NotFound from "./pages/notFound";
 
 import { IntlProvider } from "react-intl";
 import translations from "./i18n/locales";
@@ -40,8 +40,10 @@ class App extends Component {
     return (
       <IntlProvider locale={this.state.locale} messages={this.state.messages}>
         <Router>
-          <Route path="/" component={exemple} exact />
-          <Route component={notFound} />
+          <Switch>
+            <Route exact path="/" component={exemple} />
+            <Route component={NotFound} />
+          </Switch>
         </Router>
       </IntlProvider>
     );
