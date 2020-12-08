@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import exemple from "./pages/exemple";
-import NotFound from "./pages/NotFound";
+import NotFound from "./pages/notFound";
 
 import { IntlProvider } from "react-intl";
 import translations from "./i18n/locales";
