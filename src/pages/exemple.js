@@ -4,6 +4,8 @@ import { FormattedMessage } from "react-intl";
 import logo from "../images/logo.svg";
 import "../App.scss";
 
+import MDXDocument, { metadata } from "../content/helloWorld.mdx";
+
 export default class exemple extends Component {
   constructor(props) {
     super(props);
@@ -29,6 +31,10 @@ export default class exemple extends Component {
           >
             Learn React
           </a>
+          <MDXDocument />
+          <footer>
+            <p>By: {metadata.Author}</p>
+          </footer>
         </header>
       </div>
     );
