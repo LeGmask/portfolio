@@ -9,3 +9,8 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
+    reviewers:
+    - "LeGmask"
+    commit-message:
+      # Prefix all commit messages with "npm"
+      prefix: "⬆️"
