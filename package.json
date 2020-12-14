@@ -23,7 +23,7 @@
     "react-scripts": "4.0.1",
     "remark-emoji": "^2.1.0",
     "remark-images": "^2.0.0",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-app-rewired start",
