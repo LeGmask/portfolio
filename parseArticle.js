@@ -29,7 +29,7 @@ if (articles.includes("postList.json")) {
 try {
   postList = JSON.parse(fs.readFileSync("./src/content/postList.json"));
 } catch (error) {
-  console.error(error);
+  console.log("No postList found, creating new one ...");
   postList = [];
 }
 
