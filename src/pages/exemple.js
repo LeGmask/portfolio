@@ -4,7 +4,7 @@ import { FormattedMessage } from "react-intl";
 import logo from "../images/logo.svg";
 import "../App.scss";
 
-import MDXDocument, { metadata } from "../content/helloWorld.mdx";
+import MDXDocument, { metadata } from "../content/helloWorld.en.mdx";
 
 export default class exemple extends Component {
   constructor(props) {
