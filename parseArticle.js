@@ -34,11 +34,12 @@ try {
 }
 
 // json = JSON.stringify({ test: "test" });
-
 for (i in articles) {
   let article = articles[i];
   let metadata = parseMetadata(`./src/content/${articles[i]}`);
-  let articleName = `${metadata.name.replace(" ", "-")}-${metadata.id}`;
+  let articleName = encodeURI(
+    `${metadata.name.replace(" ", "-").toLowerCase()}-${metadata.id}`
+  );
   var articleExistsName = [];
   for (i in postList) {
     articleExistsName.push(postList[i].name);
