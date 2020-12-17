@@ -59,6 +59,7 @@ for (i in articles) {
   } else {
     postList.push({
       id: articleName,
+      date: metadata.date,
       author: metadata.author,
       name: metadata.name,
       synopsis: metadata.synopsis,
