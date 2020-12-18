@@ -1,4 +1,5 @@
-export const metadata = {
+---
+{
   id: "nn2jbVfFS",
   date: "17/12/2020",
   author: "Evann DREUMONT",
@@ -6,8 +7,9 @@ export const metadata = {
   synopsis: "Hello World",
   lang: "FR",
   image: false,
-};
+}
+---
 
-# Hello World ! This is MDX
+# Hello World ! C'est markdown :fr:
 
-> MDX is a JSX in Markdown loader, parser, and renderer for ambitious projects.
+> J'ai décider de passer a remarkjs a la place de mdx, et c'est $10^9$ fois plus puissant :smile:
