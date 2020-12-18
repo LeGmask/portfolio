@@ -6,7 +6,7 @@ import logo from "../images/logo.svg";
 import "../App.scss";
 
 import postlist from "../content/postList.json";
-const lang = "FR";
+const lang = "EN";
 
 export default class exemple extends Component {
   constructor(props) {
@@ -18,9 +18,8 @@ export default class exemple extends Component {
         fetchedPost.title = post.title ? post.title : "No title given";
         fetchedPost.date = post.date ? post.date : "No date given";
         fetchedPost.author = post.author ? post.author : "No author given";
-        fetchedPost.content = post.content[lang]
-          ? post.content[lang]
-          : "No content given";
+        content = require(`../${post.file}`);
+        fetchedPost.content = content.content[lang];
       }
     });
     this.state = {
