@@ -1,15 +1,49 @@
 import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
+import Markdown from "../components/markdownComponent";
 
 import logo from "../images/logo.svg";
 import "../App.scss";
 
-import MDXDocument, { metadata } from "../content/helloWorld.en.mdx";
+import postlist from "../content/postList.json";
+const lang = "FR";
+const markdown = `
+A paragraph with *emphasis* and **strong importance**.
+
+> A block quote with ~strikethrough~ and a URL: https://reactjs.org. :+1: ($C_L$)
+
+* Lists
+- [ ] todo
+- [x] done
+
+A table:
+
+| a | b |
+| - | - |
+
+~~~js
+console.log('It works! >= <=') => www 
+~~~
+`;
 
 export default class exemple extends Component {
   constructor(props) {
     super(props);
     document.title = "Exemple";
+    var fetchedPost = {};
+    postlist.forEach((post, i) => {
+      if ("hello-world-nn2jbVfFS" === post.id) {
+        fetchedPost.title = post.title ? post.title : "No title given";
+        fetchedPost.date = post.date ? post.date : "No date given";
+        fetchedPost.author = post.author ? post.author : "No author given";
+        fetchedPost.content = post.content[lang]
+          ? post.content[lang]
+          : "No content given";
+      }
+    });
+    this.state = {
+      content: fetchedPost.content,
+    };
   }
 
   render() {
@@ -31,10 +65,7 @@ export default class exemple extends Component {
           >
             Learn React
           </a>
-          <MDXDocument />
-          <footer>
-            <p>By: {metadata.Author}</p>
-          </footer>
+          <Markdown>{this.state.content}</Markdown>
         </header>
       </div>
     );
