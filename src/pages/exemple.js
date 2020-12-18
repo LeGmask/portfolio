@@ -7,31 +7,13 @@ import "../App.scss";
 
 import postlist from "../content/postList.json";
 const lang = "FR";
-const markdown = `
-A paragraph with *emphasis* and **strong importance**.
-
-> A block quote with ~strikethrough~ and a URL: https://reactjs.org. :+1: ($C_L$)
-
-* Lists
-- [ ] todo
-- [x] done
-
-A table:
-
-| a | b |
-| - | - |
-
-~~~js
-console.log('It works! >= <=') => www 
-~~~
-`;
 
 export default class exemple extends Component {
   constructor(props) {
     super(props);
     document.title = "Exemple";
     var fetchedPost = {};
-    postlist.forEach((post, i) => {
+    postlist.forEach((post) => {
       if ("hello-world-nn2jbVfFS" === post.id) {
         fetchedPost.title = post.title ? post.title : "No title given";
         fetchedPost.date = post.date ? post.date : "No date given";
