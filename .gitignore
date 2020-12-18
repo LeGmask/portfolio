@@ -137,3 +137,4 @@ dist
 
 #List of articles
 postList.json
+src/content/articles/*

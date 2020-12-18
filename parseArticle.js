@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 
 function parseMetadata(path) {
   let fileData = fs.readFileSync(path, "utf-8");
@@ -20,15 +21,16 @@ function parseMetadata(path) {
   }; // We return metada parsed
 }
 var postList = [];
+var contentList = [];
 
 let articles = fs.readdirSync("./src/content/"); // We read content folder to generate id
 
 if (articles.includes("postList.json")) {
   // we remove list if she already exist
-  articles.splice(
-    articles.indexOf("postList.json"),
-    articles.indexOf("postList.json")
-  );
+  articles.splice(articles.indexOf("postList.json"), 1);
+}
+if (articles.includes("articles")) {
+  articles.splice(articles.indexOf("articles"), 1);
 }
 
 try {
@@ -38,7 +40,6 @@ try {
   postList = [];
 }
 
-// json = JSON.stringify({ test: "test" });
 for (i in articles) {
   let { metadata, content } = parseMetadata(`./src/content/${articles[i]}`);
   let articleName = encodeURI(
@@ -55,7 +56,7 @@ for (i in articles) {
           postList[i].lang.push(metadata.lang);
           postList[i].name[metadata.lang] = metadata.name;
           postList[i].synopsis[metadata.lang] = metadata.synopsis;
-          postList[i].content[metadata.lang] = content;
+          contentList[i].content[metadata.lang] = content;
         }
         break;
       }
@@ -69,9 +70,30 @@ for (i in articles) {
       synopsis: { [metadata.lang]: metadata.synopsis },
       lang: [metadata.lang],
       image: metadata.image,
+      file: `content/articles/${metadata.id}.json`,
+    });
+    contentList.push({
+      name: metadata.id,
       content: { [metadata.lang]: content },
     });
   }
+}
+
+if (!fs.existsSync("./src/content/articles")) {
+  fs.mkdirSync("./src/content/articles");
+}
+
+for (i in contentList) {
+  fs.writeFile(
+    `./src/content/articles/${contentList[i].name}.json`,
+    JSON.stringify(contentList[i]),
+    function (err) {
+      if (err) {
+        console.log(err);
+        throw new error(err);
+      }
+    }
+  );
 }
 
 fs.writeFile(
