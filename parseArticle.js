@@ -42,6 +42,7 @@ try {
 
 for (i in articles) {
   let { metadata, content } = parseMetadata(`./src/content/${articles[i]}`);
+  metadata.lang = metadata.lang.toLowerCase();
   let articleName = encodeURI(
     `${metadata.name.replace(" ", "-").toLowerCase()}-${metadata.id}`
   );

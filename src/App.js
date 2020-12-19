@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import exemple from "./pages/exemple";
+import Blog from "./pages/blog";
 import NotFound from "./pages/notFound";
 
 import { IntlProvider } from "react-intl";
@@ -42,6 +43,15 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={exemple} />
+            <Route
+              path="/blog/:article"
+              component={(routerProps) => (
+                <Blog
+                  locale={this.state.locale}
+                  postId={routerProps.match.params.article}
+                />
+              )}
+            />
             <Route component={NotFound} />
           </Switch>
         </Router>
