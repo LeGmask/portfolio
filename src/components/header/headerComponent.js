@@ -9,7 +9,7 @@ class Header extends Component {
     super(props);
 
     this.state = {
-      shadow: "none",
+      shadow: "",
     };
   }
 
@@ -24,11 +24,11 @@ class Header extends Component {
     let scrollTop = event.target.scrollingElement.scrollTop;
     if (scrollTop != 0) {
       this.setState({
-        shadow: "0 1px 4px rgba(0, 0, 0, 0.15)",
+        shadow: "header__shadow",
       });
     } else {
       this.setState({
-        shadow: "none",
+        shadow: "",
       });
     }
   }
@@ -43,10 +43,7 @@ class Header extends Component {
       contact: <Message id="header.navbar.contact" defaultMessage="contact" />,
     };
     return (
-      <div
-        className="header__navbar"
-        style={{ boxShadow: this.state.shadow, transition: "all 0.3s" }}
-      >
+      <div className={`header__navbar ${this.state.shadow}`}>
         <nav>
           <div className="navbar__container">
             <NavLink
