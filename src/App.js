@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import Header from "./components/header/headerComponent";
 import exemple from "./pages/exemple";
 import NotFound from "./pages/notFound";
 
@@ -40,6 +41,7 @@ class App extends Component {
     return (
       <IntlProvider locale={this.state.locale} messages={this.state.messages}>
         <Router>
+          <Header />
           <Switch>
             <Route exact path="/" component={exemple} />
             <Route component={NotFound} />

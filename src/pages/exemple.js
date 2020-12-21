@@ -6,7 +6,7 @@ import logo from "../images/logo.svg";
 import "../App.scss";
 
 import postlist from "../content/postList.json";
-const lang = "EN";
+const lang = "FR";
 
 export default class exemple extends Component {
   constructor(props) {

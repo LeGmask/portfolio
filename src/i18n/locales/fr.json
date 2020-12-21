@@ -1,4 +1,8 @@
 {
   "Home.welcome": "Salut ! version francaise",
+  "header.navbar.about": "À-propos",
+  "header.navbar.blog": "Blog",
+  "header.navbar.contact": "Contact",
+  "header.navbar.projects": "Projets",
   "notFound.404": "Bip, Bop, Bioup ? Vous vous êtes perdu ?"
 }

@@ -1,5 +1,25 @@
 [
   {
+    "id": "header.navbar.projects",
+    "defaultMessage": "Projects",
+    "filepath": "src/components/header/headerComponent.js"
+  },
+  {
+    "id": "header.navbar.blog",
+    "defaultMessage": "Blog",
+    "filepath": "src/components/header/headerComponent.js"
+  },
+  {
+    "id": "header.navbar.about",
+    "defaultMessage": "About",
+    "filepath": "src/components/header/headerComponent.js"
+  },
+  {
+    "id": "header.navbar.contact",
+    "defaultMessage": "contact",
+    "filepath": "src/components/header/headerComponent.js"
+  },
+  {
     "id": "Home.welcome",
     "defaultMessage": "Edit <code>src/App.js</code> and save to reload.",
     "filepath": "src/pages/exemple.js"

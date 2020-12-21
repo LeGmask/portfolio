@@ -1,4 +1,8 @@
-@import "../node_modules/nord/src/sass/nord.scss";
+@import "./sass/color";
+
+body {
+  box-sizing: border-box;
+}
 
 .App {
   text-align: center;
