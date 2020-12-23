@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
 import Markdown from "../components/markdownComponent";
 
-import logo from "../images/logo.svg";
+import { ReactComponent as Logo } from "../images/logo.svg";
 import "../App.scss";
 
 import postlist from "../content/postList.json";
@@ -18,7 +18,7 @@ export default class exemple extends Component {
         fetchedPost.title = post.title ? post.title : "No title given";
         fetchedPost.date = post.date ? post.date : "No date given";
         fetchedPost.author = post.author ? post.author : "No author given";
-        content = require(`../${post.file}`);
+        let content = require(`../${post.file}`);
         fetchedPost.content = content.content[lang];
       }
     });
@@ -31,7 +31,7 @@ export default class exemple extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <Logo className="Logo" />
           <p>
             <FormattedMessage
               id="Home.welcome"
