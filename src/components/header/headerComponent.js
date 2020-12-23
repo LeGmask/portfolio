@@ -35,12 +35,10 @@ class Header extends Component {
 
   render() {
     let messages = {
-      projects: (
-        <Message id="header.navbar.projects" defaultMessage="Projects" />
-      ),
-      blog: <Message id="header.navbar.blog" defaultMessage="Blog" />,
-      about: <Message id="header.navbar.about" defaultMessage="About" />,
-      contact: <Message id="header.navbar.contact" defaultMessage="contact" />,
+      projects: <Message id="link.nav.projects" defaultMessage="Projects" />,
+      blog: <Message id="link.nav.blog" defaultMessage="Blog" />,
+      about: <Message id="link.nav.about" defaultMessage="About" />,
+      contact: <Message id="link.nav.contact" defaultMessage="Contact" />,
     };
     return (
       <div className={`header__navbar ${this.state.shadow}`}>

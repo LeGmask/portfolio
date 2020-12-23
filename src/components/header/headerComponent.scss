@@ -33,6 +33,7 @@
       max-width: 70px;
       a:nth-child(2) {
         margin-top: 5px;
+        padding: 5px;
         border-top: 1px solid white;
       }
     }
@@ -68,7 +69,7 @@
 }
 
 .navbar__link:hover {
-  color: lighten($nord7, 20%);
+  color: $nord8;
   transition: all 0.3s;
 }
 
