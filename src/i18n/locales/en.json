@@ -1,8 +1,15 @@
 {
   "Home.welcome": "Hey there ! English version",
-  "header.navbar.about": "About",
-  "header.navbar.blog": "Blog",
-  "header.navbar.contact": "contact",
-  "header.navbar.projects": "Projects",
+  "footer.copyright.build": "Made with love by myself",
+  "footer.copyright.notAtAll": "Not At All",
+  "footer.copyright.wordpress": "Powered By WordPress",
+  "footer.flag": "🇺🇸",
+  "footer.language": "English",
+  "link.nav.about": "About",
+  "link.nav.blog": "Blog",
+  "link.nav.contact": "Contact",
+  "link.nav.credits": "Credits",
+  "link.nav.home": "Home",
+  "link.nav.projects": "Projects",
   "notFound.404": "Bip, Bop, Bioup ? Your lost ?"
 }

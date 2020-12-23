@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./components/header/headerComponent";
 import exemple from "./pages/exemple";
 import NotFound from "./pages/notFound";
+import Footer from "./components/footer/footerComponent";
 
 import { IntlProvider } from "react-intl";
 import translations from "./i18n/locales";
@@ -46,6 +47,10 @@ class App extends Component {
             <Route exact path="/" component={exemple} />
             <Route component={NotFound} />
           </Switch>
+          <Footer
+            onChangeLanguage={this.onChangeLanguage}
+            locale={this.state.locale}
+          />
         </Router>
       </IntlProvider>
     );
