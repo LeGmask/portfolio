@@ -1,0 +1,10 @@
+@import "../../sass/color";
+
+.markdown-body {
+  margin: 5% 2%;
+  padding: 10px;
+  border: 1px solid $nord6;
+  border-radius: 10px;
+  background-color: $nord0;
+  color: $nord6;
+}

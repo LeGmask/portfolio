@@ -1,0 +1,11 @@
+@import "../../sass/color";
+
+.footer__separator,
+.header__navbar {
+  background-color: $nord0 !important;
+}
+
+.blog {
+  display: flex;
+  background-color: $nord0;
+}

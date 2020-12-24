@@ -1,9 +1,11 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 
-import Markdown from "../components/markdownComponent";
+import Markdown from "../components/markdownComponent/markdownComponent";
 
 import postList from "../content/postList.json";
+
+import "./sass/blog.scss";
 
 function getPost(url) {
   let article = null;
@@ -47,18 +49,18 @@ class Blog extends Component {
 
   render() {
     let content = this.post ? (
-      <Fragment>
+      <div className="blog__article">
         <h2>{this.state.title}</h2>
         <small>
           Published on {this.state.date} by {this.state.author}
         </small>
         <hr />
         <Markdown>{this.state.content}</Markdown>
-      </Fragment>
+      </div>
     ) : (
       <Redirect to="/404" />
     ); // return 404 if post doesn't exists
-    return <div className="blog__article">{content}</div>;
+    return <div className="blog">{content}</div>;
   }
 }
 
