@@ -1,5 +1,80 @@
 [
   {
+    "id": "footer.language",
+    "defaultMessage": "English",
+    "filepath": "src/components/footer/footerComponent.js"
+  },
+  {
+    "id": "footer.flag",
+    "defaultMessage": "🇫🇷",
+    "filepath": "src/components/footer/footerComponent.js"
+  },
+  {
+    "id": "link.nav.home",
+    "defaultMessage": "Home",
+    "filepath": "src/components/footer/footerComponent.js"
+  },
+  {
+    "id": "link.nav.projects",
+    "defaultMessage": "Projects",
+    "filepath": "src/components/footer/footerComponent.js"
+  },
+  {
+    "id": "link.nav.blog",
+    "defaultMessage": "Blog",
+    "filepath": "src/components/footer/footerComponent.js"
+  },
+  {
+    "id": "link.nav.about",
+    "defaultMessage": "About",
+    "filepath": "src/components/footer/footerComponent.js"
+  },
+  {
+    "id": "link.nav.contact",
+    "defaultMessage": "Contact",
+    "filepath": "src/components/footer/footerComponent.js"
+  },
+  {
+    "id": "link.nav.credits",
+    "defaultMessage": "Credits",
+    "filepath": "src/components/footer/footerComponent.js"
+  },
+  {
+    "id": "footer.copyright.build",
+    "defaultMessage": "Made with love by myself",
+    "filepath": "src/components/footer/footerComponent.js"
+  },
+  {
+    "id": "footer.copyright.notAtAll",
+    "defaultMessage": "Not At All",
+    "filepath": "src/components/footer/footerComponent.js"
+  },
+  {
+    "id": "footer.copyright.wordpress",
+    "defaultMessage": "Powered By WordPress",
+    "filepath": "src/components/footer/footerComponent.js"
+  },
+  {
+    "id": "link.nav.projects",
+    "defaultMessage": "Projects",
+    "filepath": "src/components/header/headerComponent.js"
+  },
+  {
+    "id": "link.nav.blog",
+    "defaultMessage": "Blog",
+    "filepath": "src/components/header/headerComponent.js"
+  },
+  {
+    "id": "link.nav.about",
+    "defaultMessage": "About",
+    "filepath": "src/components/header/headerComponent.js"
+  },
+  {
+    "id": "link.nav.contact",
+    "defaultMessage": "Contact",
+    "filepath": "src/components/header/headerComponent.js"
+  },
+  {
     "id": "Home.welcome",
     "defaultMessage": "Edit <code>src/App.js</code> and save to reload.",
     "filepath": "src/pages/exemple.js"

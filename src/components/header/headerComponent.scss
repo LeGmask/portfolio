@@ -1,0 +1,86 @@
+@import "../../sass/color";
+@import url("http://fonts.cdnfonts.com/css/trebuchet-ms-2");
+
+.header__navbar {
+  padding: 20px;
+  background-color: $nord1;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+
+  nav {
+    height: auto;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar__container {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 162px;
+    a {
+      display: inline-block;
+      text-align: center;
+    }
+    .navbar__link__separator {
+      visibility: hidden;
+    }
+    @media screen and (max-width: 500px) {
+      max-width: 70px;
+      a:nth-child(2) {
+        margin-top: 5px;
+        padding: 5px;
+        border-top: 1px solid white;
+      }
+    }
+  }
+
+  .navbar__container:first-child {
+    margin-right: 10px;
+  }
+  .navbar__container:last-child {
+    margin-left: 10px;
+  }
+
+  .navbar__container:nth-child(2) {
+    flex: 1;
+  }
+}
+
+.header__shadow {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s;
+}
+
+.navbar__link:link,
+.navbar__link:visited {
+  color: $nord6;
+  text-decoration: none;
+}
+
+.navbar__link {
+  font-family: "Trebuchet MS", sans-serif;
+  color: $nord6;
+  font-size: 1em;
+}
+
+.navbar__link:hover {
+  color: $nord8;
+  transition: all 0.3s;
+}
+
+.navbar__link:active {
+  text-decoration: underline !important;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.navbar__link__selected {
+  text-decoration: underline !important;
+  font-weight: bold;
+  transition: all 0.3s;
+}

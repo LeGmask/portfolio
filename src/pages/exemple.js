@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 
-import logo from "../images/logo.svg";
+import { ReactComponent as Logo } from "../images/logo.svg";
 import "../App.scss";
 
 export default class exemple extends Component {
@@ -15,7 +15,7 @@ export default class exemple extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <Logo className="Logo" />
           <p>
             <FormattedMessage
               id="Home.welcome"

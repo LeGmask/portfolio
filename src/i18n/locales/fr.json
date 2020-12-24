@@ -1,4 +1,15 @@
 {
   "Home.welcome": "Salut ! version francaise",
+  "footer.copyright.build": "Fait avec passion par moi-même",
+  "footer.copyright.notAtAll": "Pas Du Tout",
+  "footer.copyright.wordpress": "Propulsé Par WordPress",
+  "footer.flag": "🇫🇷",
+  "footer.language": "Français",
+  "link.nav.about": "À-propos",
+  "link.nav.blog": "Blog",
+  "link.nav.contact": "Contact",
+  "link.nav.credits": "Crédits",
+  "link.nav.home": "Home",
+  "link.nav.projects": "Projets",
   "notFound.404": "Bip, Bop, Bioup ? Vous vous êtes perdu ?"
 }

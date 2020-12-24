@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import Header from "./components/header/headerComponent";
 import exemple from "./pages/exemple";
 import Blog from "./pages/blog";
 import NotFound from "./pages/notFound";
+import Footer from "./components/footer/footerComponent";
 
 import { IntlProvider } from "react-intl";
 import translations from "./i18n/locales";
@@ -41,6 +43,7 @@ class App extends Component {
     return (
       <IntlProvider locale={this.state.locale} messages={this.state.messages}>
         <Router>
+          <Header />
           <Switch>
             <Route exact path="/" component={exemple} />
             <Route
@@ -54,6 +57,10 @@ class App extends Component {
             />
             <Route component={NotFound} />
           </Switch>
+          <Footer
+            onChangeLanguage={this.onChangeLanguage}
+            locale={this.state.locale}
+          />
         </Router>
       </IntlProvider>
     );
