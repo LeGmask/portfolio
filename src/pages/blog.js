@@ -20,6 +20,7 @@ function getPost(url) {
 class Blog extends Component {
   constructor(props) {
     super(props);
+    var lang = props.locale;
 
     this.post = getPost(this.props.postId);
 
@@ -30,17 +31,17 @@ class Blog extends Component {
     }
 
     if (this.post) {
+      if (!this.post.lang.includes(props.locale)) {
+        lang = this.post.lang[0];
+      }
+
       this.state = {
         url: this.props.postId,
         id: this.post.id ? this.post.id : "No id",
-        title: this.post.name[props.locale]
-          ? this.post.name[props.locale]
-          : "No name",
+        title: this.post.name[lang] ? this.post.name[lang] : "No name",
         date: this.post.date ? this.post.date : "No date",
         author: this.post.author ? this.post.author : "No author",
-        content: content.content[props.locale]
-          ? content.content[props.locale]
-          : "No content",
+        content: content.content[lang] ? content.content[lang] : "No content",
       };
 
       document.title = this.state.title;
