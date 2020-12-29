@@ -5,7 +5,7 @@ function parseMetadata(path) {
   let fileData = fs.readFileSync(path, "utf-8");
   let content = fileData;
   let metadata = fileData //Firstly we match metadata = {json...} and after we match more precisely with only {json}
-    .match(/(---)[\s\S]*(---)/g)[0]
+    .match(/(---\n{)[\s\S]*(}\n---)/g)[0]
     .match(/({[\s\S]*})/g)[0];
   let keys = metadata.match(/\S\w*(?=:)/g); // We match key to add "" on it
   for (i in keys) {
@@ -13,7 +13,7 @@ function parseMetadata(path) {
   }
   metadata = JSON.parse(metadata.replace(/,\n(?=})/g, "")); // if last child have a , we drop it
 
-  content = content.replace(/(---)[\s\S]*(---)/g, "");
+  content = content.replace(/(---\n{)[\s\S]*(}\n---)/g, "");
 
   return {
     metadata,
