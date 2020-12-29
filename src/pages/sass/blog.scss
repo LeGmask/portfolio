@@ -8,4 +8,10 @@
 .blog {
   display: flex;
   background-color: $nord0;
+  align-items: center;
+  justify-content: center;
+  &__article {
+    width: 100%;
+    color: $nord6;
+  }
 }
