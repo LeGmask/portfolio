@@ -3,7 +3,7 @@ import { Redirect } from "react-router-dom";
 
 import Markdown from "../components/markdownComponent/markdownComponent";
 
-import postList from "../content/postList.json";
+import postList from "../content/blog/postList.json";
 
 import "./sass/blog.scss";
 

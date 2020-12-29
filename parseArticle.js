@@ -23,7 +23,7 @@ function parseMetadata(path) {
 var postList = [];
 var contentList = [];
 
-let articles = fs.readdirSync("./src/content/"); // We read content folder to generate id
+let articles = fs.readdirSync("./src/content/blog"); // We read content folder to generate id
 
 if (articles.includes("postList.json")) {
   // we remove list if she already exist
@@ -34,14 +34,16 @@ if (articles.includes("articles")) {
 }
 
 try {
-  postList = JSON.parse(fs.readFileSync("./src/content/postList.json"));
+  postList = JSON.parse(fs.readFileSync("./src/content/blog/postList.json"));
 } catch (error) {
   console.log("No postList found, creating new one ...");
   postList = [];
 }
 
 for (i in articles) {
-  let { metadata, content } = parseMetadata(`./src/content/${articles[i]}`);
+  let { metadata, content } = parseMetadata(
+    `./src/content/blog/${articles[i]}`
+  );
   metadata.lang = metadata.lang.toLowerCase();
   let articleName = encodeURI(
     `${metadata.name.replace(" ", "-").toLowerCase()}-${metadata.id}`
@@ -71,7 +73,7 @@ for (i in articles) {
       synopsis: { [metadata.lang]: metadata.synopsis },
       lang: [metadata.lang],
       image: metadata.image,
-      file: `content/articles/${metadata.id}.json`,
+      file: `content/blog/articles/${metadata.id}.json`,
     });
     contentList.push({
       name: metadata.id,
@@ -80,13 +82,13 @@ for (i in articles) {
   }
 }
 
-if (!fs.existsSync("./src/content/articles")) {
-  fs.mkdirSync("./src/content/articles");
+if (!fs.existsSync("./src/content/blog/articles")) {
+  fs.mkdirSync("./src/content/blog/articles");
 }
 
 for (i in contentList) {
   fs.writeFile(
-    `./src/content/articles/${contentList[i].name}.json`,
+    `./src/content/blog/articles/${contentList[i].name}.json`,
     JSON.stringify(contentList[i]),
     function (err) {
       if (err) {
@@ -98,7 +100,7 @@ for (i in contentList) {
 }
 
 fs.writeFile(
-  "./src/content/postList.json",
+  "./src/content/blog/postList.json",
   JSON.stringify(postList),
   function (err) {
     if (err) {

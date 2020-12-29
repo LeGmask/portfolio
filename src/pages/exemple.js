@@ -28,9 +28,9 @@ export default class exemple extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React or read my last
-            <Link to="/blog/hello-world-nn2jbVfFS">Article</Link>
-          </a>
+            Learn React
+          </a>{" "}
+          or read my last <Link to="/blog/hello-world-nn2jbVfFS"> Article</Link>
         </header>
       </div>
     );
