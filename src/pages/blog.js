@@ -21,6 +21,7 @@ class Blog extends Component {
   constructor(props) {
     super(props);
     var lang = props.locale;
+    var content = "No content";
 
     this.post = getPost(this.props.postId);
 
