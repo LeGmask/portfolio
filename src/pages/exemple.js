@@ -1,30 +1,14 @@
 import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
-import Markdown from "../components/markdownComponent";
+import { Link } from "react-router-dom";
 
 import { ReactComponent as Logo } from "../images/logo.svg";
 import "../App.scss";
-
-import postlist from "../content/postList.json";
-const lang = "FR";
 
 export default class exemple extends Component {
   constructor(props) {
     super(props);
     document.title = "Exemple";
-    var fetchedPost = {};
-    postlist.forEach((post) => {
-      if ("hello-world-nn2jbVfFS" === post.id) {
-        fetchedPost.title = post.title ? post.title : "No title given";
-        fetchedPost.date = post.date ? post.date : "No date given";
-        fetchedPost.author = post.author ? post.author : "No author given";
-        let content = require(`../${post.file}`);
-        fetchedPost.content = content.content[lang];
-      }
-    });
-    this.state = {
-      content: fetchedPost.content,
-    };
   }
 
   render() {
@@ -45,8 +29,8 @@ export default class exemple extends Component {
             rel="noopener noreferrer"
           >
             Learn React
-          </a>
-          <Markdown>{this.state.content}</Markdown>
+          </a>{" "}
+          or read my last <Link to="/blog/hello-world-nn2jbVfFS"> Article</Link>
         </header>
       </div>
     );

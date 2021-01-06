@@ -10,6 +10,8 @@ import { nord } from "react-syntax-highlighter/dist/esm/styles/prism";
 import Tex from "@matejmazur/react-katex";
 import math from "remark-math";
 import "katex/dist/katex.min.css"; // `react-katex` does not import the CSS for you
+
+import "./markdownComponent.scss";
 // ---- --------------- ---- \\
 
 const remarkConfig = {
@@ -37,6 +39,7 @@ class Markdown extends Component {
         renderers={remarkConfig.renderers}
         plugins={remarkConfig.plugins}
         allowDangerousHtml
+        className="markdown-body"
       >
         {this.props.children}
       </ReactMarkdown>
