@@ -7,7 +7,9 @@
   border-radius: 10px;
   background-color: $nord0;
   color: $nord6;
-
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
   p {
     word-wrap: break-word;
     margin-top: 0;
@@ -30,11 +32,14 @@
   }
 
   blockquote {
-    padding: 0 1em;
+    padding: 5px 1em;
     color: $nord5;
     border-left: 0.25em solid $nord8;
     border-radius: 3px;
     background-color: $nord1;
+    p {
+      margin: 0;
+    }
   }
 
   pre {

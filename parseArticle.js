@@ -46,7 +46,7 @@ for (i in articles) {
   );
   metadata.lang = metadata.lang.toLowerCase();
   let articleName = encodeURI(
-    `${metadata.name.replace(" ", "-").toLowerCase()}-${metadata.id}`
+    `${metadata.shortName.replace(" ", "-").toLowerCase()}-${metadata.id}`
   );
   var articleExistsId = [];
   for (i in postList) {

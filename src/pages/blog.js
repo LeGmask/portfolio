@@ -7,6 +7,8 @@ import postList from "../content/blog/postList.json";
 
 import "./sass/blog.scss";
 
+import pp from "../images/pp.png";
+
 function getPost(url) {
   let article = null;
   postList.forEach((post) => {
@@ -40,8 +42,10 @@ class Blog extends Component {
         url: this.props.postId,
         id: this.post.id ? this.post.id : "No id",
         title: this.post.name[lang] ? this.post.name[lang] : "No name",
+        synopsis: this.post.synopsis[lang] ? this.post.synopsis[lang] : "",
         date: this.post.date ? this.post.date : "No date",
         author: this.post.author ? this.post.author : "No author",
+        image: this.post.image ? this.post.image : false,
         content: content.content[lang] ? content.content[lang] : "No content",
       };
 
@@ -52,11 +56,25 @@ class Blog extends Component {
   render() {
     let content = this.post ? (
       <div className="blog__article">
-        <h2>{this.state.title}</h2>
-        <small>
-          Published on {this.state.date} by {this.state.author}
-        </small>
-        <hr />
+        <div className="blog__article__container">
+          <div className="blog__article__metadata">
+            <div className="blog__artile__metadata__title">
+              <h1>{this.state.title}</h1>
+            </div>
+            {/* <p>{this.state.synopsis}</p> */}
+            <div className="blog__article__metadata__bottom">
+              <div className="blog__article__metadata__bottom__creator">
+                <img src={pp} alt={this.state.author}></img>
+                <h5>
+                  {this.state.author} - {this.state.date}
+                </h5>
+              </div>
+              <div className="blog__article__metadata__bottom__share"></div>{" "}
+              {/* nothing for now but to add someday */}
+            </div>
+          </div>
+        </div>
+        <img src={this.state.image} />
         <Markdown>{this.state.content}</Markdown>
       </div>
     ) : (

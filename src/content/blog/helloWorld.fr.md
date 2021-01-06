@@ -3,6 +3,7 @@
   id: "nn2jbVfFS",
   date: "17/12/2020",
   author: "Evann DREUMONT",
+  shortName: "Hello World",
   name: "Hello World",
   synopsis: "Hello World",
   lang: "FR",
