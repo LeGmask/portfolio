@@ -80,18 +80,42 @@ class Footer extends Component {
             <a href="https://github.com/legmask" target="_blank">
               <GithubIcon className="footer__icon" />
             </a>
-            <a href="https://twitter.com/evann_drmt" target="_blank">
-              <TwitterIcon className="footer__icon" />
-            </a>
-            <a href="mailto:evann.dreumont@gmail.com" target="_blank">
-              <MailIcon className="footer__icon" />
-            </a>
             <a
               href="https://stackoverflow.com/users/14726040/legmask"
               target="_blank"
             >
               <StackOverflowIcon className="footer__icon" />
             </a>
+            <a href="https://twitter.com/evann_drmt" target="_blank">
+              <TwitterIcon className="footer__icon" />
+            </a>
+            <a href="mailto:evann.dreumont@gmail.com" target="_blank">
+              <MailIcon className="footer__icon" />
+            </a>
+          </div>
+        </div>
+        <div className="footer__lang">
+          <div
+            className={
+              "footer__locale " +
+              (this.state.localeDropdown ? "footer__locale-active" : "")
+            }
+            onClick={() =>
+              this.setState({ localeDropdown: !this.state.localeDropdown })
+            }
+          >
+            {translations[this.state.locale]["footer.language"]}{" "}
+            {translations[this.state.locale]["footer.flag"]}
+            <div
+              className={
+                "footer__locale__dropdown " +
+                (this.state.localeDropdown
+                  ? "footer__locale__dropdown-show"
+                  : "")
+              }
+            >
+              {langs_list}
+            </div>
           </div>
         </div>
         <div className="footer__copyright">
@@ -106,12 +130,12 @@ class Footer extends Component {
               <span className="notAtAll">
                 <Message
                   id="footer.copyright.notAtAll"
-                  defaultMessage="Not At All "
+                  defaultMessage="Not at all "
                 />
               </span>{" "}
               <Message
                 id="footer.copyright.wordpress"
-                defaultMessage="Powered By WordPress"
+                defaultMessage="powered by WordPress"
               />
             </div>
             <div>© 2020 ‒ Evann "LeGmask" DREUMONT</div>
@@ -169,30 +193,6 @@ class Footer extends Component {
             >
               {messages.credits}
             </NavLink>
-          </div>
-        </div>
-        <div className="footer__lang">
-          <div
-            className={
-              "footer__locale " +
-              (this.state.localeDropdown ? "footer__locale-active" : "")
-            }
-            onClick={() =>
-              this.setState({ localeDropdown: !this.state.localeDropdown })
-            }
-          >
-            {translations[this.state.locale]["footer.language"]}{" "}
-            {translations[this.state.locale]["footer.flag"]}
-            <div
-              className={
-                "footer__locale__dropdown " +
-                (this.state.localeDropdown
-                  ? "footer__locale__dropdown-show"
-                  : "")
-              }
-            >
-              {langs_list}
-            </div>
           </div>
         </div>
         <div className="footer__works__licence">
