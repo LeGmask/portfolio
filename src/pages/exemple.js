@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../images/logo.svg";
 import "../App.scss";
 
+import Spinner from "../components/spinnerComponent/spinnerComponent";
+
 export default class exemple extends Component {
   constructor(props) {
     super(props);
@@ -15,7 +17,8 @@ export default class exemple extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Logo className="Logo" />
+          {/* <Logo className="Logo" /> */}
+          <Spinner />
           <p>
             <FormattedMessage
               id="Home.welcome"
