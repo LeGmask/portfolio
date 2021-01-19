@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 
-import { ReactComponent as Logo } from "../images/logo.svg";
+// import { ReactComponent as Logo } from "../images/logo.svg";
 import "../App.scss";
 
 import Spinner from "../components/spinnerComponent/spinnerComponent";
