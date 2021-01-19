@@ -5,7 +5,7 @@ import Markdown from "../components/markdownComponent/markdownComponent";
 
 import postList from "../content/blog/postList.json";
 
-import "./sass/blog.scss";
+import "./sass/blogPost.scss";
 
 import pp from "../images/pp.png";
 
@@ -19,7 +19,7 @@ function getPost(url) {
   return article;
 }
 
-class Blog extends Component {
+class BlogPost extends Component {
   constructor(props) {
     super(props);
     var lang = props.locale;
@@ -84,4 +84,4 @@ class Blog extends Component {
   }
 }
 
-export default Blog;
+export default BlogPost;

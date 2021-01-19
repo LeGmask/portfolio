@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Header from "./components/header/headerComponent";
 import exemple from "./pages/exemple";
-import Blog from "./pages/blog";
+import BlogPost from "./pages/blogPost";
 import NotFound from "./pages/notFound";
 import Footer from "./components/footer/footerComponent";
 
@@ -49,7 +49,7 @@ class App extends Component {
             <Route
               path="/blog/:article"
               component={(routerProps) => (
-                <Blog
+                <BlogPost
                   locale={this.state.locale}
                   postId={routerProps.match.params.article}
                 />
