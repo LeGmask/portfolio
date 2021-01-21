@@ -14,7 +14,6 @@ class BlogCard extends Component {
     };
   }
   render() {
-    let img = this.state.img ? <img src={this.state.img} /> : "";
     return (
       <div className="card">
         <div className="card__content">
@@ -26,7 +25,9 @@ class BlogCard extends Component {
               <p>{this.state.synopsis}</p>
             </div>
           </div>
-          <div className="card__content__image">{img}</div>
+          <div className="card__content__image">
+            {this.state.img ? <img src={this.state.img} /> : ""}
+          </div>
         </div>
       </div>
     );

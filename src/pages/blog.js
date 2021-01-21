@@ -7,7 +7,7 @@ class Blog extends Component {
   render() {
     return (
       <div className="blog">
-        <div className="blog__grid">
+        <div className="blog__post">
           <BlogCard
             img="https://i.imgur.com/HuiuYGa.png"
             title="Hello World!"
