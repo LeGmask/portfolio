@@ -1,0 +1,49 @@
+@import "../../sass/color";
+
+.card {
+  &__content {
+    display: flex;
+    margin: 50px 10%;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+
+    background-color: $nord2;
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column-reverse;
+    }
+
+    &__image {
+      flex: 1;
+      align-self: center;
+      margin: 20px;
+      img {
+        border-radius: 5px;
+        width: 100%;
+      }
+    }
+
+    &__metadata {
+      flex: 3;
+      color: $nord6;
+      margin: 20px;
+
+      @media screen and (max-width: 900px) {
+        margin-top: 0px;
+      }
+
+      &__synopsis {
+        font-weight: 300;
+        text-align: justify;
+      }
+
+      &__title {
+        h1 {
+          text-decoration: underline;
+          text-underline-offset: 5px;
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./components/header/headerComponent";
 import exemple from "./pages/exemple";
 import BlogPost from "./pages/blogPost";
+import Blog from "./pages/blog";
 import NotFound from "./pages/notFound";
 import Footer from "./components/footer/footerComponent";
 
@@ -55,6 +56,7 @@ class App extends Component {
                 />
               )}
             />
+            <Route exact path="/blog" component={Blog} />
             <Route component={NotFound} />
           </Switch>
           <Footer
