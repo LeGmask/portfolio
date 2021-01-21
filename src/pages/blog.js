@@ -12,6 +12,7 @@ class Blog extends Component {
             img="https://i.imgur.com/HuiuYGa.png"
             title="Hello World!"
             synopsis="lorem ipsum dolorem sit amet duro que cando tante de milo de nanda. Senor te auro que conocio la montagna"
+            link="/blog/hello-world-nn2jbVfFS"
           />
           <BlogCard
             img="https://i.imgur.com/HuiuYGa.png"
