@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import ScrollToTop from "./components/scrollToTop/scrollToTop";
 import Header from "./components/header/headerComponent";
 import exemple from "./pages/exemple";
 import BlogPost from "./pages/blogPost";
@@ -44,6 +45,7 @@ class App extends Component {
     return (
       <IntlProvider locale={this.state.locale} messages={this.state.messages}>
         <Router>
+          <ScrollToTop />
           <Header />
           <Switch>
             <Route exact path="/" component={exemple} />
