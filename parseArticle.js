@@ -99,6 +99,16 @@ for (i in contentList) {
   );
 }
 
+postList.sort(function (a, b) {
+  // order by latest to oldone
+  let aDate = a["date"].toString().split("/");
+  let bDate = b["date"].toString().split("/");
+  // let bDate = Number(b["date"].toString().replace(/\//g, ""));
+  aDate = Number(aDate[2] + aDate[1] + aDate[0]);
+  bDate = Number(bDate[2] + bDate[1] + bDate[0]);
+  return bDate - aDate;
+});
+
 fs.writeFile(
   "./src/content/blog/postList.json",
   JSON.stringify(postList),
