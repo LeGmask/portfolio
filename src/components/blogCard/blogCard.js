@@ -44,7 +44,7 @@ class BlogCard extends Component {
           <Link to={this.state.link}>
             <button>
               <Read />
-              <FormattedMessage id="Blog.read" defaultMessage="Read" />
+              <FormattedMessage id="blog.read" defaultMessage="Read" />
             </button>
           </Link>
         </div>

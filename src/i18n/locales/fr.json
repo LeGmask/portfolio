@@ -1,6 +1,7 @@
 {
-  "Blog.read": "Lire",
   "Home.welcome": "Salut ! version francaise",
+  "blog.description": "Ici, vous trouverez des articles à propos des différents projets de programmation ou numériques que je réalise, et parfois, je mettrais également quelques astuces personnelles !",
+  "blog.read": "Lire",
   "footer.copyright.build": "Fait avec passion par moi-même",
   "footer.copyright.notAtAll": "Pas du tout",
   "footer.copyright.wordpress": "propulsé par WordPress",

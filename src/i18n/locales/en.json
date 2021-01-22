@@ -1,6 +1,7 @@
 {
-  "Blog.read": "Read",
   "Home.welcome": "Hey there ! English version",
+  "blog.description": "Read about my coding or digital life, sometimes I will also put some personal tips !",
+  "blog.read": "Read",
   "footer.copyright.build": "Made with love by myself",
   "footer.copyright.notAtAll": "Not at all",
   "footer.copyright.wordpress": "powered by WordPress",

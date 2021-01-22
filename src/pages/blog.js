@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { FormattedMessage as Message } from "react-intl";
+
 import BlogCard from "../components/blogCard/blogCard";
 
 import postList from "../content/blog/postList.json";
@@ -16,7 +18,20 @@ class Blog extends Component {
   render() {
     return (
       <div className="blog">
-        <div className="blog__post">
+        <div className="blog__page">
+          <div className="blog__page__title">
+            <h1>
+              <Message id="link.nav.blog" defaultMessage="Blog" />
+            </h1>
+          </div>
+          <div className="blog__page__description">
+            <Message
+              id="blog.description"
+              defaultMessage="Read about my coding or digital life, sometimes I will also put some personal tips !"
+            />
+          </div>
+        </div>
+        <div className="blog__postList">
           {this.state.posts.map(
             function (post) {
               let lang = this.props.locale;

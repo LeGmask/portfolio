@@ -1,6 +1,6 @@
 [
   {
-    "id": "Blog.read",
+    "id": "blog.read",
     "defaultMessage": "Read",
     "filepath": "src/components/blogCard/blogCard.js"
   },
@@ -78,6 +78,16 @@
     "id": "link.nav.contact",
     "defaultMessage": "Contact",
     "filepath": "src/components/header/headerComponent.js"
+  },
+  {
+    "id": "link.nav.blog",
+    "defaultMessage": "Blog",
+    "filepath": "src/pages/blog.js"
+  },
+  {
+    "id": "blog.description",
+    "defaultMessage": "Read about my coding or digital life, sometimes I will also put some personal tips !",
+    "filepath": "src/pages/blog.js"
   },
   {
     "id": "Home.welcome",
