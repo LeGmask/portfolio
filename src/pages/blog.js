@@ -27,6 +27,7 @@ class Blog extends Component {
                 <BlogCard
                   title={post.name[lang]}
                   synopsis={post.synopsis[lang]}
+                  date={post.date}
                   img={post.image}
                   link={`/blog/${post.id}`}
                 />

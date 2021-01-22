@@ -27,6 +27,9 @@
       align-self: center;
       margin: 20px;
       img {
+        @media screen and (min-width: 900px) {
+          max-height: 150px;
+        }
         border-radius: 5px;
         width: 100%;
       }
@@ -35,7 +38,7 @@
     &__metadata {
       flex: 3;
       color: $nord6;
-      margin: 20px 0px 0px 20px;
+      margin: 20px 20px 0px 20px;
 
       @media screen and (max-width: 900px) {
         margin-top: 0px;
@@ -62,8 +65,20 @@
       color: $nord6;
       text-decoration: none;
     }
-    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
     margin: 10px;
+
+    &__date {
+      margin-bottom: 13px;
+      margin-left: 10px;
+      color: $nord4;
+      font-weight: 200;
+      font-size: small;
+      font-style: italic;
+    }
 
     button {
       display: flex;
