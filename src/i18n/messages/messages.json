@@ -1,12 +1,17 @@
 [
   {
+    "id": "Blog.read",
+    "defaultMessage": "Read",
+    "filepath": "src/components/blogCard/blogCard.js"
+  },
+  {
     "id": "footer.language",
     "defaultMessage": "English",
     "filepath": "src/components/footer/footerComponent.js"
   },
   {
     "id": "footer.flag",
-    "defaultMessage": "🇫🇷",
+    "defaultMessage": "🇺🇸",
     "filepath": "src/components/footer/footerComponent.js"
   },
   {

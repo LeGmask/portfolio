@@ -1,0 +1,109 @@
+@import "../../sass/color";
+@import "../../sass/animation";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 10%;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+
+  background-color: $nord2;
+
+  &__content {
+    a:visited,
+    a:link {
+      color: $nord6;
+      text-decoration: none;
+    }
+    display: flex;
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column-reverse;
+    }
+
+    &__image {
+      flex: 1;
+      align-self: center;
+      margin: 20px;
+      img {
+        @media screen and (min-width: 900px) {
+          max-height: 150px;
+        }
+        border-radius: 5px;
+        width: 100%;
+      }
+    }
+
+    &__metadata {
+      flex: 3;
+      color: $nord6;
+      margin: 20px 20px 0px 20px;
+
+      @media screen and (max-width: 900px) {
+        margin-top: 0px;
+      }
+
+      &__synopsis {
+        font-weight: 300;
+        text-align: justify;
+      }
+
+      &__title {
+        h1 {
+          text-decoration: underline;
+          text-underline-offset: 5px;
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+
+  &__control {
+    a:visited,
+    a:link {
+      color: $nord6;
+      text-decoration: none;
+    }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 10px;
+
+    &__date {
+      margin-bottom: 13px;
+      margin-left: 10px;
+      color: $nord4;
+      font-weight: 200;
+      font-size: small;
+      font-style: italic;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      color: $nord6;
+      background-color: $nord2;
+      border: 1px solid rgba(255, 255, 255, 0);
+      outline: none;
+      font-size: 18px;
+      padding: 8px 12px;
+      cursor: pointer;
+      &:hover {
+        border: 1px solid $nord4;
+        background-color: $nord3;
+        transition: all 0.3s;
+        animation: hover-feedback 0.3s;
+      }
+
+      svg {
+        padding-right: 5px;
+      }
+    }
+  }
+}

@@ -1,13 +1,8 @@
 @import "../../sass/color";
 
-.footer__separator,
-.header__navbar {
-  background-color: $nord0 !important;
-}
-
 .blog {
   display: flex;
-  background-color: $nord0;
+  background-color: #292e39;
   align-items: center;
   justify-content: center;
 

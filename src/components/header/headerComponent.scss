@@ -3,7 +3,7 @@
 
 .header__navbar {
   padding: 20px;
-  background-color: $nord1;
+  background-color: #292e39;
   position: sticky;
   top: 0px;
   z-index: 1;
@@ -64,6 +64,7 @@
 
 .navbar__link {
   font-family: "Trebuchet MS", sans-serif;
+  outline: none;
   color: $nord6;
   font-size: 1em;
 }

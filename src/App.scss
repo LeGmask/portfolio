@@ -24,7 +24,7 @@ body {
 // }
 
 .App-header {
-  background-color: $nord0;
+  background-color: #292e39;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -48,8 +48,4 @@ body {
   to {
     transform: rotate(360deg);
   }
-}
-
-.header__navbar {
-  background-color: $nord0; // ovverides header color
 }

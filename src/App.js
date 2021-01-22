@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import ScrollToTop from "./components/scrollToTop/scrollToTop";
 import Header from "./components/header/headerComponent";
 import exemple from "./pages/exemple";
 import BlogPost from "./pages/blogPost";
+import Blog from "./pages/blog";
 import NotFound from "./pages/notFound";
 import Footer from "./components/footer/footerComponent";
 
@@ -43,6 +45,7 @@ class App extends Component {
     return (
       <IntlProvider locale={this.state.locale} messages={this.state.messages}>
         <Router>
+          <ScrollToTop />
           <Header />
           <Switch>
             <Route exact path="/" component={exemple} />
@@ -54,6 +57,11 @@ class App extends Component {
                   postId={routerProps.match.params.article}
                 />
               )}
+            />
+            <Route
+              exact
+              path="/blog"
+              component={() => <Blog locale={this.state.locale} />}
             />
             <Route component={NotFound} />
           </Switch>

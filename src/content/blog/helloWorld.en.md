@@ -7,7 +7,7 @@
   name: "Hello World",
   synopsis: "Hello World",
   lang: "EN",
-  image: false,
+  image: "https://i.imgur.com/HuiuYGa.png",
 }
 ---
 
