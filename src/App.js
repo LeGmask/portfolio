@@ -56,7 +56,11 @@ class App extends Component {
                 />
               )}
             />
-            <Route exact path="/blog" component={Blog} />
+            <Route
+              exact
+              path="/blog"
+              component={() => <Blog locale={this.state.locale} />}
+            />
             <Route component={NotFound} />
           </Switch>
           <Footer

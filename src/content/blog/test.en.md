@@ -7,7 +7,7 @@
   name: "What about a markdown test file ? Here it is !",
   synopsis: "A sample markdown file to test css",
   lang: "EN",
-  image: false,
+  image: "https://img.icons8.com/pastel-glyph/2x/test-tube--v2.png",
 }
 ---
 

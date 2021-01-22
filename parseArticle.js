@@ -7,7 +7,7 @@ function parseMetadata(path) {
   let metadata = fileData //Firstly we match metadata = {json...} and after we match more precisely with only {json}
     .match(/(---\n{)[\s\S]*(}\n---)/g)[0]
     .match(/({[\s\S]*})/g)[0];
-  let keys = metadata.match(/\S\w*(?=:)/g); // We match key to add "" on it
+  let keys = metadata.match(/\S\w*(?=: )/g); // We match key to add "" on it
   for (i in keys) {
     metadata = metadata.replace(keys[i], `"${keys[i]}"`); // we add "" on each key in the object
   }

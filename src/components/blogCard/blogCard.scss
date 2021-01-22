@@ -83,6 +83,10 @@
         transition: all 0.3s;
         animation: hover-feedback 0.3s;
       }
+
+      svg {
+        padding-right: 5px;
+      }
     }
   }
 }

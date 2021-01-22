@@ -1,59 +1,38 @@
 import React, { Component } from "react";
 import BlogCard from "../components/blogCard/blogCard";
 
+import postList from "../content/blog/postList.json";
+
 import "./sass/blog.scss";
 
 class Blog extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      posts: postList,
+    };
+  }
   render() {
     return (
       <div className="blog">
         <div className="blog__post">
-          <BlogCard
-            img="https://i.imgur.com/HuiuYGa.png"
-            title="Hello World!"
-            synopsis="lorem ipsum dolorem sit amet duro que cando tante de milo de nanda. Senor te auro que conocio la montagna"
-            link="/blog/hello-world-nn2jbVfFS"
-          />
-          <BlogCard
-            img="https://i.imgur.com/HuiuYGa.png"
-            title="Hello World!"
-            synopsis="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec nunc vitae magna aliquet tempus. Nullam id cursus velit. In urna nunc, tempus venenatis elit sit amet, facilisis laoreet quam. Nulla in erat vulputate, tristique orci eu, scelerisque turpis. Vivamus eu dapibus enim, feugiat luctus purus. Etiam elementum ut libero ac venenatis. Aliquam fermentum, nisl sed auctor eleifend, erat sapien laoreet dolor, ut semper ligula enim nec purus. Sed tellus felis, posuere quis ornare porttitor, rhoncus et libero. Cras a condimentum diam, et tempus odio. Aliquam erat volutpat. "
-          />
-          <BlogCard
-            img="https://i.imgur.com/HuiuYGa.png"
-            title="Hello World!"
-            synopsis="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec nunc vitae magna aliquet tempus. Nullam id cursus velit. In urna nunc, tempus venenatis elit sit amet, facilisis laoreet quam. Nulla in erat vulputate, tristique orci eu, scelerisque turpis. Vivamus eu dapibus enim, feugiat luctus purus. Etiam elementum ut libero ac venenatis. Aliquam fermentum, nisl sed auctor eleifend, erat sapien laoreet dolor, ut semper ligula enim nec purus. Sed tellus felis, posuere quis ornare porttitor, rhoncus et libero. Cras a condimentum diam, et tempus odio. Aliquam erat volutpat. "
-          />
-          <BlogCard
-            img="https://i.imgur.com/HuiuYGa.png"
-            title="Hello World!"
-            synopsis="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec nunc vitae magna aliquet tempus. Nullam id cursus velit. In urna nunc, tempus venenatis elit sit amet, facilisis laoreet quam. Nulla in erat vulputate, tristique orci eu, scelerisque turpis. Vivamus eu dapibus enim, feugiat luctus purus. Etiam elementum ut libero ac venenatis. Aliquam fermentum, nisl sed auctor eleifend, erat sapien laoreet dolor, ut semper ligula enim nec purus. Sed tellus felis, posuere quis ornare porttitor, rhoncus et libero. Cras a condimentum diam, et tempus odio. Aliquam erat volutpat. "
-          />
-          <BlogCard
-            img="https://i.imgur.com/HuiuYGa.png"
-            title="Hello World!"
-            synopsis="lorem ipsum dolorem sit amet duro que cando tante de milo de nanda. Senor te auro que conocio la montagna"
-          />
-          <BlogCard
-            img="https://i.imgur.com/HuiuYGa.png"
-            title="Hello World!"
-            synopsis="lorem ipsum dolorem sit amet duro que cando tante de milo de nanda. Senor te auro que conocio la montagna"
-          />
-          <BlogCard
-            img="https://i.imgur.com/HuiuYGa.png"
-            title="Hello World!"
-            synopsis="lorem ipsum dolorem sit amet duro que cando tante de milo de nanda. Senor te auro que conocio la montagna"
-          />
-          <BlogCard
-            img="https://i.imgur.com/HuiuYGa.png"
-            title="Hello World!"
-            synopsis="lorem ipsum dolorem sit amet duro que cando tante de milo de nanda. Senor te auro que conocio la montagna"
-          />
-          <BlogCard
-            img="https://i.imgur.com/HuiuYGa.png"
-            title="Hello World!"
-            synopsis="lorem ipsum dolorem sit amet duro que cando tante de milo de nanda. Senor te auro que conocio la montagna"
-          />
+          {this.state.posts.map(
+            function (post) {
+              let lang = this.props.locale;
+              if (!post.lang.includes(this.props.locale)) {
+                lang = post.lang[0];
+              }
+              return (
+                <BlogCard
+                  title={post.name[lang]}
+                  synopsis={post.synopsis[lang]}
+                  img={post.image}
+                  link={`/blog/${post.id}`}
+                />
+              );
+            }.bind(this)
+          )}
         </div>
       </div>
     );
