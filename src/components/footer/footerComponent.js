@@ -218,7 +218,7 @@ class Footer extends Component {
               <span style={{ color: "#ECEFF4" }}>.</span>
               <span style={{ color: "#3599D6" }}>addLicence</span>
               <span style={{ color: "#ECEFF4" }}>(</span>
-              <span style={{ color: "#26B777" }}>"MIT"</span>
+              <span style={{ color: "#26B777" }}>"CC-BY-NC-SA"</span>
               <span style={{ color: "#ECEFF4" }}>)</span>
               <span style={{ color: "#D8DEE9" }}>;</span>
               <br />
