@@ -35,7 +35,7 @@
     &__metadata {
       flex: 3;
       color: $nord6;
-      margin: 20px;
+      margin: 20px 0px 0px 20px;
 
       @media screen and (max-width: 900px) {
         margin-top: 0px;
@@ -72,14 +72,16 @@
       padding: 10px;
       border-radius: 10px;
       border: none;
-      color: $nord10;
-      background-color: $nord1;
+      color: $nord6;
+      background-color: $nord2;
+      border: 1px solid rgba(255, 255, 255, 0);
       outline: none;
-      font-size: 20px;
-      line-height: 1.3em;
+      font-size: 18px;
+      padding: 8px 12px;
       cursor: pointer;
       &:hover {
-        background-color: $nord0;
+        border: 1px solid $nord4;
+        background-color: $nord3;
         transition: all 0.3s;
         animation: hover-feedback 0.3s;
       }
