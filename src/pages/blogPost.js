@@ -7,8 +7,6 @@ import postList from "../content/blog/postList.json";
 
 import "./sass/blogPost.scss";
 
-import pp from "../images/pp.png";
-
 function getPost(url) {
   let article = null;
   postList.forEach((post) => {
@@ -64,7 +62,10 @@ class BlogPost extends Component {
             {/* <p>{this.state.synopsis}</p> */}
             <div className="blog__article__metadata__bottom">
               <div className="blog__article__metadata__bottom__creator">
-                <img src={pp} alt={this.state.author}></img>
+                <img
+                  src="https://www.gravatar.com/avatar/d0777905cd81c3495197a148cd3f40c0"
+                  alt={this.state.author}
+                ></img>
                 <h5>
                   {this.state.author} - {this.state.date}
                 </h5>
