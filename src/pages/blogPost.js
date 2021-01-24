@@ -7,8 +7,6 @@ import postList from "../content/blog/postList.json";
 
 import "./sass/blogPost.scss";
 
-import pp from "../images/pp.png";
-
 function getPost(url) {
   let article = null;
   postList.forEach((post) => {
