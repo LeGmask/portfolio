@@ -48,8 +48,6 @@ class BlogPost extends Component {
         image: this.post.image ? this.post.image : false,
         content: content.content[lang] ? content.content[lang] : "No content",
       };
-
-      document.title = this.state.title;
     }
   }
 
