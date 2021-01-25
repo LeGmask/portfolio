@@ -53,7 +53,7 @@ class BlogCard extends Component {
   }
 }
 
-BlogCard.PropTypes = {
+BlogCard.propTypes = {
   title: PropTypes.string,
   synopsis: PropTypes.string,
   date: PropTypes.string,
