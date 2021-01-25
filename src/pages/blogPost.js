@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 
 import Markdown from "../components/markdownComponent/markdownComponent";
+import ReactHelmet from "../components/helmet/reactHelmet";
+import Beadcrumb from "../components/helmet/beadcrumb";
 
 import postList from "../content/blog/postList.json";
 
@@ -46,14 +48,19 @@ class BlogPost extends Component {
         image: this.post.image ? this.post.image : false,
         content: content.content[lang] ? content.content[lang] : "No content",
       };
-
-      document.title = this.state.title;
     }
   }
 
   render() {
     let content = this.post ? (
       <div className="blog__article">
+        <ReactHelmet
+          title={this.state.title}
+          description={this.state.synopsis}
+          author={this.state.author}
+          keywords={["blog", "article"]}
+        />
+        <Beadcrumb path={window.location.pathname} />
         <div className="blog__article__container">
           <div className="blog__article__metadata">
             <div className="blog__artile__metadata__title">

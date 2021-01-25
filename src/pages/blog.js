@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { FormattedMessage as Message } from "react-intl";
 
 import BlogCard from "../components/blogCard/blogCard";
+import Beadcrumb from "../components/helmet/beadcrumb";
+import ReactHelmet from "../components/helmet/reactHelmet";
 
 import postList from "../content/blog/postList.json";
 
@@ -18,6 +20,16 @@ class Blog extends Component {
   render() {
     return (
       <div className="blog">
+        <ReactHelmet
+          title="Blog"
+          description="An exemple page"
+          author="Evann DREUMONT"
+          keywords={["blog", "articles"]}
+        />
+        <Beadcrumb
+          path={window.location.pathname}
+          origin={window.location.origin}
+        />
         <div className="blog__page">
           <div className="blog__page__title">
             <h1>
