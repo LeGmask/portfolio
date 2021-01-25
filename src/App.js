@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 
 import ScrollToTop from "./components/scrollToTop/scrollToTop";
 import Header from "./components/header/headerComponent";
@@ -43,34 +44,36 @@ class App extends Component {
 
   render() {
     return (
-      <IntlProvider locale={this.state.locale} messages={this.state.messages}>
-        <Router>
-          <ScrollToTop />
-          <Header />
-          <Switch>
-            <Route exact path="/" component={exemple} />
-            <Route
-              path="/blog/:article"
-              component={(routerProps) => (
-                <BlogPost
-                  locale={this.state.locale}
-                  postId={routerProps.match.params.article}
-                />
-              )}
+      <HelmetProvider>
+        <IntlProvider locale={this.state.locale} messages={this.state.messages}>
+          <Router>
+            <ScrollToTop />
+            <Header />
+            <Switch>
+              <Route exact path="/" component={exemple} />
+              <Route
+                path="/blog/:article"
+                component={(routerProps) => (
+                  <BlogPost
+                    locale={this.state.locale}
+                    postId={routerProps.match.params.article}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/blog"
+                component={() => <Blog locale={this.state.locale} />}
+              />
+              <Route component={NotFound} />
+            </Switch>
+            <Footer
+              onChangeLanguage={this.onChangeLanguage}
+              locale={this.state.locale}
             />
-            <Route
-              exact
-              path="/blog"
-              component={() => <Blog locale={this.state.locale} />}
-            />
-            <Route component={NotFound} />
-          </Switch>
-          <Footer
-            onChangeLanguage={this.onChangeLanguage}
-            locale={this.state.locale}
-          />
-        </Router>
-      </IntlProvider>
+          </Router>
+        </IntlProvider>
+      </HelmetProvider>
     );
   }
 }

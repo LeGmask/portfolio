@@ -1,21 +1,29 @@
 import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 // import { ReactComponent as Logo } from "../images/logo.svg";
 import "../App.scss";
+import Beadcrumb from "../components/helmet/beadcrumb";
 
+import ReactHelmet from "../components/helmet/reactHelmet";
 import Spinner from "../components/spinnerComponent/spinnerComponent";
 
 export default class exemple extends Component {
   constructor(props) {
     super(props);
-    document.title = "Exemple";
   }
 
   render() {
+    console.log(window.location.pathname);
     return (
       <div className="App">
+        <ReactHelmet
+          title="Exemple"
+          description="An exemple page"
+          keywords={["Exemple", "test"]}
+        />
+        <Beadcrumb path={window.location.pathname} />
         <header className="App-header">
           {/* <Logo className="Logo" /> */}
           <Spinner />

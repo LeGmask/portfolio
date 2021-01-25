@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 class ReactHelmet extends Component {
   constructor(props) {
@@ -20,8 +20,8 @@ class ReactHelmet extends Component {
         ""
       ),
 
-      keyswords: this.props.keyswords ? (
-        <meta name="keywords" content={this.props.keyswords.toString()} />
+      keywords: this.props.keywords ? (
+        <meta name="keywords" content={this.props.keywords.toString()} />
       ) : (
         ""
       ),
@@ -33,7 +33,7 @@ class ReactHelmet extends Component {
       <Helmet>
         {this.state.title}
         {this.state.description}
-        {this.state.keyswords}
+        {this.state.keywords}
         {this.props.children}
       </Helmet>
     );
