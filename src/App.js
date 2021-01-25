@@ -1,5 +1,10 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect as RouterRedirect,
+} from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 
 import ScrollToTop from "./components/scrollToTop/scrollToTop";
@@ -7,6 +12,7 @@ import Header from "./components/header/headerComponent";
 import exemple from "./pages/exemple";
 import BlogPost from "./pages/blogPost";
 import Blog from "./pages/blog";
+import Redirect from "./pages/redirect";
 import NotFound from "./pages/notFound";
 import Footer from "./components/footer/footerComponent";
 
@@ -65,7 +71,15 @@ class App extends Component {
                 path="/blog"
                 component={() => <Blog locale={this.state.locale} />}
               />
-              <Route component={NotFound} />
+              <Route path="/to/:service" component={Redirect} />
+              <Route
+                component={() => (
+                  <>
+                    <RouterRedirect to="/404" />
+                    <NotFound />
+                  </>
+                )}
+              />
             </Switch>
             <Footer
               onChangeLanguage={this.onChangeLanguage}
