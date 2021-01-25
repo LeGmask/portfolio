@@ -60,7 +60,7 @@ class BlogPost extends Component {
           author={this.state.author}
           keywords={["blog", "article"]}
         />
-        <Beadcrumb path={window.location.path} />
+        <Beadcrumb path={window.location.pathname} />
         <div className="blog__article__container">
           <div className="blog__article__metadata">
             <div className="blog__artile__metadata__title">

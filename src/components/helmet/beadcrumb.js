@@ -13,7 +13,7 @@ class Beadcrumb extends Component {
   }
 
   splitPath(path) {
-    if (path.length > 1) {
+    if (path && path.length > 1) {
       return path.substring(1, path.length - 1).split("/");
     } else {
       return null;
@@ -31,7 +31,6 @@ class Beadcrumb extends Component {
   }
 
   render() {
-    console.log(this.props.path);
     if (this.state.path) {
       let itemListElements = this.state.path.map(
         function (value, index) {
