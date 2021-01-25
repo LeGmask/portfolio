@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-// import { ReactComponent as Logo } from "../images/logo.svg";
 import "../App.scss";
 import Beadcrumb from "../components/helmet/beadcrumb";
 
@@ -15,7 +14,6 @@ export default class exemple extends Component {
   }
 
   render() {
-    console.log(window.location.pathname);
     return (
       <div className="App">
         <ReactHelmet
@@ -25,7 +23,6 @@ export default class exemple extends Component {
         />
         <Beadcrumb path={window.location.pathname} />
         <header className="App-header">
-          {/* <Logo className="Logo" /> */}
           <Spinner />
           <p>
             <FormattedMessage
