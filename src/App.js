@@ -8,13 +8,13 @@ import {
 import { HelmetProvider } from "react-helmet-async";
 
 import ScrollToTop from "./components/scrollToTop/scrollToTop";
-import Header from "./components/header/headerComponent";
+import Header from "./components/header/header";
 import exemple from "./pages/exemple";
 import BlogPost from "./pages/blogPost";
 import Blog from "./pages/blog";
 import Redirect from "./pages/redirect";
 import NotFound from "./pages/notFound";
-import Footer from "./components/footer/footerComponent";
+import Footer from "./components/footer/footer";
 
 import { IntlProvider } from "react-intl";
 import translations from "./i18n/locales";

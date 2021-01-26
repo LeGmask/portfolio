@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 import { SiMinutemailer as MailIcon } from "react-icons/si";
 
-import "./footerComponent.scss";
+import "./footer.scss";
 
 import { ReactComponent as Logo } from "../../images/logo_small.svg";
 import { ReactComponent as Separator } from "../../images/footer__separator.svg";

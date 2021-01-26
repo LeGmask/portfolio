@@ -3,7 +3,7 @@ import { Redirect as RouterRedirect } from "react-router-dom";
 
 import Spinner from "../components/spinnerComponent/spinnerComponent";
 
-import "./sass/redirect.scss";
+import "./scss/redirect.scss";
 
 class Redirect extends Component {
   constructor(props) {

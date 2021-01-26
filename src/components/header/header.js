@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { FormattedMessage as Message } from "react-intl";
 import { NavLink } from "react-router-dom";
 
-import "./headerComponent.scss";
+import "./header.scss";
 
 class Header extends Component {
   constructor(props) {

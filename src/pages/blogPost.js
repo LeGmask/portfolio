@@ -7,7 +7,7 @@ import Beadcrumb from "../components/helmet/beadcrumb";
 
 import postList from "../content/blog/postList.json";
 
-import "./sass/blogPost.scss";
+import "./scss/blogPost.scss";
 
 function getPost(url) {
   let article = null;

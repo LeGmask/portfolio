@@ -7,7 +7,7 @@ import ReactHelmet from "../components/helmet/reactHelmet";
 
 import postList from "../content/blog/postList.json";
 
-import "./sass/blog.scss";
+import "./scss/blog.scss";
 
 class Blog extends Component {
   constructor(props) {
