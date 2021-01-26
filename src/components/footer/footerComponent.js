@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { FormattedMessage as Message } from "react-intl";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import translations from "../../i18n/locales";
 
@@ -77,21 +77,18 @@ class Footer extends Component {
             <span className="name">Evann DREUMONT</span>
           </div>
           <div className="footer__content__social">
-            <a href="https://github.com/legmask" target="_blank">
+            <Link to="to/github" target="_blank">
               <GithubIcon className="footer__icon" />
-            </a>
-            <a
-              href="https://stackoverflow.com/users/14726040/legmask"
-              target="_blank"
-            >
+            </Link>
+            <Link to="/to/stackoverflow" target="_blank">
               <StackOverflowIcon className="footer__icon" />
-            </a>
-            <a href="https://twitter.com/evann_drmt" target="_blank">
+            </Link>
+            <Link to="/to/twitter" target="_blank">
               <TwitterIcon className="footer__icon" />
-            </a>
-            <a href="mailto:evann.dreumont@gmail.com" target="_blank">
+            </Link>
+            <Link to="/to/mail" target="_blank">
               <MailIcon className="footer__icon" />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="footer__lang">
