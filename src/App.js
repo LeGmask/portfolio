@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Suspense } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -9,12 +9,18 @@ import { HelmetProvider } from "react-helmet-async";
 
 import ScrollToTop from "./components/scrollToTop/scrollToTop";
 import Header from "./components/header/header";
-import exemple from "./pages/exemple";
-import BlogPost from "./pages/blogPost";
-import Blog from "./pages/blog";
+// const Exemple = React.lazy(() => import("./pages/exemple"));
+import Exemple from "./pages/exemple";
+const BlogPost = React.lazy(() => import("./pages/blogPost"));
+// import BlogPost from "./pages/blogPost";
+const Blog = React.lazy(() => import("./pages/blog"));
+// import Blog from "./pages/blog";
+// const Redirect = React.lazy(() => import("./pages/redirect"));
 import Redirect from "./pages/redirect";
+// const NotFound = React.lazy(() => import("./pages/notFound"));
 import NotFound from "./pages/notFound";
 import Footer from "./components/footer/footer";
+import Loader from "./components/loader/loader";
 
 import { IntlProvider } from "react-intl";
 import translations from "./i18n/locales";
@@ -55,32 +61,34 @@ class App extends Component {
           <Router>
             <ScrollToTop />
             <Header />
-            <Switch>
-              <Route exact path="/" component={exemple} />
-              <Route
-                path="/blog/:article"
-                component={(routerProps) => (
-                  <BlogPost
-                    locale={this.state.locale}
-                    postId={routerProps.match.params.article}
-                  />
-                )}
-              />
-              <Route
-                exact
-                path="/blog"
-                component={() => <Blog locale={this.state.locale} />}
-              />
-              <Route path="/to/:service" component={Redirect} />
-              <Route
-                component={() => (
-                  <>
-                    <RouterRedirect to="/404" />
-                    <NotFound />
-                  </>
-                )}
-              />
-            </Switch>
+            <Suspense fallback={<Loader />}>
+              <Switch>
+                <Route exact path="/" component={Exemple} />
+                <Route
+                  path="/blog/:article"
+                  component={(routerProps) => (
+                    <BlogPost
+                      locale={this.state.locale}
+                      postId={routerProps.match.params.article}
+                    />
+                  )}
+                />
+                <Route
+                  exact
+                  path="/blog"
+                  component={() => <Blog locale={this.state.locale} />}
+                />
+                <Route path="/to/:service" component={Redirect} />
+                <Route
+                  component={() => (
+                    <>
+                      <RouterRedirect to="/404" />
+                      <NotFound />
+                    </>
+                  )}
+                />
+              </Switch>
+            </Suspense>
             <Footer
               onChangeLanguage={this.onChangeLanguage}
               locale={this.state.locale}

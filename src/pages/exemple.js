@@ -8,7 +8,7 @@ import Beadcrumb from "../components/helmet/beadcrumb";
 import ReactHelmet from "../components/helmet/reactHelmet";
 import Spinner from "../components/spinnerComponent/spinnerComponent";
 
-export default class exemple extends Component {
+export default class Exemple extends Component {
   constructor(props) {
     super(props);
   }

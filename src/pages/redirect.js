@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Redirect as RouterRedirect } from "react-router-dom";
 
-import Spinner from "../components/spinnerComponent/spinnerComponent";
+import Loader from "../components/loader/loader";
 
 import "./scss/redirect.scss";
 
@@ -37,16 +37,7 @@ class Redirect extends Component {
     }
   }
   render() {
-    return this.state[404] ? (
-      <RouterRedirect to="/404" />
-    ) : (
-      <div className="redirect">
-        <div className="redirect__spinner">
-          <Spinner />
-        </div>
-        <h1>Loading ...</h1>
-      </div>
-    );
+    return this.state[404] ? <RouterRedirect to="/404" /> : <Loader />;
   }
 }
 
