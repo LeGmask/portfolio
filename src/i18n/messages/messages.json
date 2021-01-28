@@ -7,77 +7,82 @@
   {
     "id": "footer.language",
     "defaultMessage": "English",
-    "filepath": "src/components/footer/footerComponent.js"
+    "filepath": "src/components/footer/footer.js"
   },
   {
     "id": "footer.flag",
     "defaultMessage": "🇺🇸",
-    "filepath": "src/components/footer/footerComponent.js"
+    "filepath": "src/components/footer/footer.js"
   },
   {
     "id": "link.nav.home",
     "defaultMessage": "Home",
-    "filepath": "src/components/footer/footerComponent.js"
+    "filepath": "src/components/footer/footer.js"
   },
   {
     "id": "link.nav.projects",
     "defaultMessage": "Projects",
-    "filepath": "src/components/footer/footerComponent.js"
+    "filepath": "src/components/footer/footer.js"
   },
   {
     "id": "link.nav.blog",
     "defaultMessage": "Blog",
-    "filepath": "src/components/footer/footerComponent.js"
+    "filepath": "src/components/footer/footer.js"
   },
   {
     "id": "link.nav.about",
     "defaultMessage": "About",
-    "filepath": "src/components/footer/footerComponent.js"
+    "filepath": "src/components/footer/footer.js"
   },
   {
     "id": "link.nav.contact",
     "defaultMessage": "Contact",
-    "filepath": "src/components/footer/footerComponent.js"
+    "filepath": "src/components/footer/footer.js"
   },
   {
     "id": "link.nav.credits",
     "defaultMessage": "Credits",
-    "filepath": "src/components/footer/footerComponent.js"
+    "filepath": "src/components/footer/footer.js"
   },
   {
     "id": "footer.copyright.build",
     "defaultMessage": "Made with love by myself",
-    "filepath": "src/components/footer/footerComponent.js"
+    "filepath": "src/components/footer/footer.js"
   },
   {
     "id": "footer.copyright.notAtAll",
     "defaultMessage": "Not at all",
-    "filepath": "src/components/footer/footerComponent.js"
+    "filepath": "src/components/footer/footer.js"
   },
   {
     "id": "footer.copyright.wordpress",
     "defaultMessage": "powered by WordPress",
-    "filepath": "src/components/footer/footerComponent.js"
+    "filepath": "src/components/footer/footer.js"
   },
   {
     "id": "link.nav.projects",
     "defaultMessage": "Projects",
-    "filepath": "src/components/header/headerComponent.js"
+    "filepath": "src/components/header/header.js"
   },
   {
     "id": "link.nav.blog",
     "defaultMessage": "Blog",
-    "filepath": "src/components/header/headerComponent.js"
+    "filepath": "src/components/header/header.js"
   },
   {
     "id": "link.nav.about",
     "defaultMessage": "About",
-    "filepath": "src/components/header/headerComponent.js"
+    "filepath": "src/components/header/header.js"
   },
   {
     "id": "link.nav.contact",
     "defaultMessage": "Contact",
-    "filepath": "src/components/header/headerComponent.js"
+    "filepath": "src/components/header/header.js"
+  },
+  {
+    "id": "loader.loading",
+    "defaultMessage": "Loading ...",
+    "filepath": "src/components/loader/loader.js"
   },
   {
     "id": "link.nav.blog",

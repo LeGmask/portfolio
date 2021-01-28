@@ -76,10 +76,10 @@ class App extends Component {
                 <Route path="/to/:service" component={Redirect} />
                 <Route
                   component={() => (
-                    <>
+                    <React.Fragment>
                       <RouterRedirect to="/404" />
                       <NotFound />
-                    </>
+                    </React.Fragment>
                   )}
                 />
               </Switch>
