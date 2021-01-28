@@ -9,15 +9,10 @@ import { HelmetProvider } from "react-helmet-async";
 
 import ScrollToTop from "./components/scrollToTop/scrollToTop";
 import Header from "./components/header/header";
-// const Exemple = React.lazy(() => import("./pages/exemple"));
-import Exemple from "./pages/exemple";
+import Exemple from "./pages/exemple"; // Home page shouldn't have a spinner on loading
 const BlogPost = React.lazy(() => import("./pages/blogPost"));
-// import BlogPost from "./pages/blogPost";
 const Blog = React.lazy(() => import("./pages/blog"));
-// import Blog from "./pages/blog";
-// const Redirect = React.lazy(() => import("./pages/redirect"));
 import Redirect from "./pages/redirect";
-// const NotFound = React.lazy(() => import("./pages/notFound"));
 import NotFound from "./pages/notFound";
 import Footer from "./components/footer/footer";
 import Loader from "./components/loader/loader";
