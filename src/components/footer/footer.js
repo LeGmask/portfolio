@@ -77,7 +77,7 @@ class Footer extends Component {
             <span className="name">Evann DREUMONT</span>
           </div>
           <div className="footer__content__social">
-            <Link to="to/github" target="_blank">
+            <Link to="/to/github" target="_blank">
               <GithubIcon className="footer__icon" />
             </Link>
             <Link to="/to/stackoverflow" target="_blank">
