@@ -12,6 +12,7 @@ import Header from "./components/header/header";
 import Exemple from "./pages/exemple"; // Home page shouldn't have a spinner on loading
 const BlogPost = React.lazy(() => import("./pages/blogPost"));
 const Blog = React.lazy(() => import("./pages/blog"));
+const About = React.lazy(() => import("./pages/about"));
 import Redirect from "./pages/redirect";
 import NotFound from "./pages/notFound";
 import Footer from "./components/footer/footer";
@@ -59,6 +60,11 @@ class App extends Component {
             <Suspense fallback={<Loader />}>
               <Switch>
                 <Route exact path="/" component={Exemple} />
+                <Route
+                  exact
+                  path="/about"
+                  component={() => <About locale={this.state.locale} />}
+                />
                 <Route
                   path="/blog/:article"
                   component={(routerProps) => (

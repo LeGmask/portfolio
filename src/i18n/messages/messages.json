@@ -85,6 +85,36 @@
     "filepath": "src/components/loader/loader.js"
   },
   {
+    "id": "about.title",
+    "defaultMessage": "About me",
+    "filepath": "src/pages/about.js"
+  },
+  {
+    "id": "about.description",
+    "defaultMessage": "Here are everything about me :",
+    "filepath": "src/pages/about.js"
+  },
+  {
+    "id": "about.card.title",
+    "defaultMessage": "Salut ! C'est Evann DREUMONT !",
+    "filepath": "src/pages/about.js"
+  },
+  {
+    "id": "about.card.bio1",
+    "defaultMessage": "J'ai {age} ans, et je suis depuis toujours intéressé par la création et le numérique. C'est cette curiosité qui m'a conduit à approfondir en autodidacte plusieurs domaines qui m'intéresse.",
+    "filepath": "src/pages/about.js"
+  },
+  {
+    "id": "about.card.bio2",
+    "defaultMessage": "J'ai notament appris à programmer dans différents langages informatiques: HTML, Python et JavaScript, ce qui m'a permis de contribuer a des projets open sources, notament a une application web pour étudiant, ainsi que de créer mon site.",
+    "filepath": "src/pages/about.js"
+  },
+  {
+    "id": "about.card.bio3",
+    "defaultMessage": "Tout mes projets de programmation sont visibles par tous sur mon profil GitHub: tout mes projets sont dits \"Open Source\"",
+    "filepath": "src/pages/about.js"
+  },
+  {
     "id": "link.nav.blog",
     "defaultMessage": "Blog",
     "filepath": "src/pages/blog.js"

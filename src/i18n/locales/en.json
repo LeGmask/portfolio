@@ -1,5 +1,11 @@
 {
   "Home.welcome": "Hey there ! English version",
+  "about.card.bio1": "I am {age} years old, and I have always been interested in creation and digital. It is this curiosity that has led me to learn by myself fields that interest me.",
+  "about.card.bio2": "I learned how to program in different computer languages, such as: HTML, Python and JavaScript, which allowed me to contribute to open source projects, including a web application for students, as well as to create my own website.",
+  "about.card.bio3": "All my programming projects are visible to everyone on my GitHub profile: all my projects are called \"Open Source\".",
+  "about.card.title": "Hi! I'm Evann DREUMONT !",
+  "about.description": "Here are everything about me :",
+  "about.title": "About me",
   "blog.description": "Read about my coding or digital life, sometimes I will also put some personal tips !",
   "blog.read": "Read",
   "footer.copyright.build": "Made with love by myself",
