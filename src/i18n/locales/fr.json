@@ -1,5 +1,11 @@
 {
   "Home.welcome": "Salut ! version francaise",
+  "about.card.bio1": "J'ai {age} ans, et je suis depuis toujours intéressé par la création et le numérique. C'est cette curiosité qui m'a conduit à approfondir en autodidacte plusieurs domaines qui m'intéresse.",
+  "about.card.bio2": "J'ai notament appris à programmer dans différents langages informatiques: HTML, Python et JavaScript, ce qui m'a permis de contribuer a des projets open sources, notament a une application web pour étudiant, ainsi que de créer mon site.",
+  "about.card.bio3": "Tout mes projets de programmation sont visibles par tous sur mon profil GitHub: tout mes projets sont dits \"Open Source\"",
+  "about.card.title": "Salut ! C'est Evann DREUMONT !",
+  "about.description": "Ici, vous trouverez tout sur moi :",
+  "about.title": "A propos",
   "blog.description": "Ici, vous trouverez des articles à propos des différents projets de programmation ou numériques que je réalise, et parfois, je mettrais également quelques astuces personnelles !",
   "blog.read": "Lire",
   "footer.copyright.build": "Fait avec passion par moi-même",
