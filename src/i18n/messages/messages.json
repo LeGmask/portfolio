@@ -155,8 +155,13 @@
     "filepath": "src/pages/exemple.js"
   },
   {
-    "id": "notFound.404",
-    "defaultMessage": "Bip, Bop, Bioup ? Vous vous êtes perdu ?",
+    "id": "notFound.title",
+    "defaultMessage": "404",
+    "filepath": "src/pages/notFound.js"
+  },
+  {
+    "id": "notFound.description",
+    "defaultMessage": "Oh no, look like the page requested doesn't exist",
     "filepath": "src/pages/notFound.js"
   }
 ]

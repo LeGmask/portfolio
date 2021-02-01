@@ -24,5 +24,6 @@
   "link.nav.home": "Home",
   "link.nav.projects": "Projects",
   "loader.loading": "Loading ...",
-  "notFound.404": "Bip, Bop, Bioup ? Your lost ?"
+  "notFound.description": "Oh no, look like the page requested doesn't exist",
+  "notFound.title": "404"
 }
