@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import { FormattedMessage as Message } from "react-intl";
 import { Link } from "react-router-dom";
 
+import ReactHelmet from "../components/helmet/reactHelmet";
+import Beadcrumb from "../components/helmet/beadcrumb";
+
+import translations from "../i18n/locales";
+
 import {
   FaDiscord as DiscordIcon,
   FaTwitter as TwitterIcon,
@@ -15,6 +20,7 @@ class Contact extends Component {
     super(props);
 
     this.state = {
+      locale: props.locale,
       discordId: "LeGmask#1968",
       popup: false,
     };
@@ -36,6 +42,16 @@ class Contact extends Component {
   render() {
     return (
       <div className="contact">
+        <ReactHelmet
+          title={translations[this.state.locale]["link.nav.contact"]}
+          description={translations[this.state.locale]["contact.description"]}
+          author="Evann DREUMONT"
+          keywords={["Contact", "mail", "twitter", "discord"]}
+        />
+        <Beadcrumb
+          path={window.location.pathname}
+          origin={window.location.origin}
+        />
         <div className="contact__page">
           <div className="contact__page__title">
             <h1>
@@ -45,7 +61,7 @@ class Contact extends Component {
           <div className="contact__page__description">
             <Message
               id="contact.description"
-              defaultMessage="How to reach me :"
+              defaultMessage="How to reach me"
             />
           </div>
         </div>

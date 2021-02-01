@@ -131,7 +131,7 @@
   },
   {
     "id": "contact.description",
-    "defaultMessage": "How to reach me :",
+    "defaultMessage": "How to reach me",
     "filepath": "src/pages/contact.js"
   },
   {
