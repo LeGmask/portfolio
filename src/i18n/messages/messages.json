@@ -125,6 +125,31 @@
     "filepath": "src/pages/blog.js"
   },
   {
+    "id": "link.nav.contact",
+    "defaultMessage": "Contact",
+    "filepath": "src/pages/contact.js"
+  },
+  {
+    "id": "contact.description",
+    "defaultMessage": "How to reach me",
+    "filepath": "src/pages/contact.js"
+  },
+  {
+    "id": "contact.mail",
+    "defaultMessage": "Send me a mail",
+    "filepath": "src/pages/contact.js"
+  },
+  {
+    "id": "contact.twitter",
+    "defaultMessage": "Slide into my twitter dms",
+    "filepath": "src/pages/contact.js"
+  },
+  {
+    "id": "contact.discord",
+    "defaultMessage": "Or through discord using my ID :",
+    "filepath": "src/pages/contact.js"
+  },
+  {
     "id": "Home.welcome",
     "defaultMessage": "Edit <code>src/App.js</code> and save to reload.",
     "filepath": "src/pages/exemple.js"

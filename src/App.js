@@ -13,6 +13,7 @@ import Exemple from "./pages/exemple"; // Home page shouldn't have a spinner on 
 const BlogPost = React.lazy(() => import("./pages/blogPost"));
 const Blog = React.lazy(() => import("./pages/blog"));
 const About = React.lazy(() => import("./pages/about"));
+const Contact = React.lazy(() => import("./pages/contact"));
 import Redirect from "./pages/redirect";
 import NotFound from "./pages/notFound";
 import Footer from "./components/footer/footer";
@@ -61,11 +62,6 @@ class App extends Component {
               <Switch>
                 <Route exact path="/" component={Exemple} />
                 <Route
-                  exact
-                  path="/about"
-                  component={() => <About locale={this.state.locale} />}
-                />
-                <Route
                   path="/blog/:article"
                   component={(routerProps) => (
                     <BlogPost
@@ -78,6 +74,16 @@ class App extends Component {
                   exact
                   path="/blog"
                   component={() => <Blog locale={this.state.locale} />}
+                />
+                <Route
+                  exact
+                  path="/about"
+                  component={() => <About locale={this.state.locale} />}
+                />
+                <Route
+                  exact
+                  path="/contact"
+                  component={() => <Contact locale={this.state.locale} />}
                 />
                 <Route path="/to/:service" component={Redirect} />
                 <Route
