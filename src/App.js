@@ -1,11 +1,13 @@
 import React, { Component, Suspense } from "react";
 import {
-  BrowserRouter as Router,
+  Router,
   Route,
   Switch,
   Redirect as RouterRedirect,
 } from "react-router-dom";
+import { createBrowserHistory } from "history";
 import { HelmetProvider } from "react-helmet-async";
+import ReactGA from "react-ga";
 
 import ScrollToTop from "./components/scrollToTop/scrollToTop";
 import Header from "./components/header/header";
@@ -21,6 +23,19 @@ import Loader from "./components/loader/loader";
 
 import { IntlProvider } from "react-intl";
 import translations from "./i18n/locales";
+
+const history = createBrowserHistory(window);
+
+if (location.hostname != "localhost") {
+  ReactGA.initialize("G-QCJMNJQCML", {
+    debug: false,
+  });
+
+  history.listen((location) => {
+    ReactGA.set({ page: location.pathname });
+    ReactGA.pageview(location.pathname);
+  });
+}
 
 class App extends Component {
   constructor(props) {
@@ -41,6 +56,12 @@ class App extends Component {
     this.onChangeLanguage = this.onChangeLanguage.bind(this);
   }
 
+  componentDidMount() {
+    if (location.hostname != "localhost") {
+      ReactGA.pageview(window.location.pathname);
+    }
+  }
+
   getLang() {
     if (navigator.languages !== undefined) return navigator.languages[0];
     else return navigator.language;
@@ -55,7 +76,7 @@ class App extends Component {
     return (
       <HelmetProvider>
         <IntlProvider locale={this.state.locale} messages={this.state.messages}>
-          <Router>
+          <Router history={history}>
             <ScrollToTop />
             <Header />
             <Suspense fallback={<Loader />}>
