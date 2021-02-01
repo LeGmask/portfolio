@@ -91,7 +91,7 @@
   },
   {
     "id": "about.description",
-    "defaultMessage": "Here are everything about me :",
+    "defaultMessage": "Here are everything about me",
     "filepath": "src/pages/about.js"
   },
   {

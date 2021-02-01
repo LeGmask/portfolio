@@ -33,7 +33,7 @@ class About extends Component {
       <div className="about">
         <ReactHelmet
           title={translations[this.state.locale]["link.nav.about"]}
-          description={translations[this.state.locale]["about.title"]}
+          description={translations[this.state.locale]["about.description"]}
           author="Evann DREUMONT"
           keywords={["About", "story", "life", "a propos", "histoire", "vie"]}
         />
@@ -50,7 +50,7 @@ class About extends Component {
           <div className="about__page__description">
             <Message
               id="about.description"
-              defaultMessage="Here are everything about me :"
+              defaultMessage="Here are everything about me"
             />
           </div>
         </div>
