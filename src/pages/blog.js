@@ -5,6 +5,8 @@ import BlogCard from "../components/blogCard/blogCard";
 import Beadcrumb from "../components/helmet/beadcrumb";
 import ReactHelmet from "../components/helmet/reactHelmet";
 
+import translations from "../i18n/locales";
+
 import postList from "../content/blog/postList.json";
 
 import "./scss/blog.scss";
@@ -14,6 +16,7 @@ class Blog extends Component {
     super(props);
 
     this.state = {
+      locale: props.locale,
       posts: postList,
     };
   }
@@ -21,10 +24,10 @@ class Blog extends Component {
     return (
       <div className="blog">
         <ReactHelmet
-          title="Blog"
-          description="An exemple page"
+          title={translations[this.state.locale]["link.nav.blog"]}
+          description={translations[this.state.locale]["blog.description"]}
           author="Evann DREUMONT"
-          keywords={["blog", "articles"]}
+          keywords={["blog", "story", "article"]}
         />
         <Beadcrumb
           path={window.location.pathname}
