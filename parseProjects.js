@@ -1,5 +1,4 @@
 const fs = require("fs");
-const path = require("path");
 
 function parseMetadata(path) {
   let fileData = fs.readFileSync(path, "utf-8");
@@ -51,80 +50,99 @@ function parseContent(content) {
     content,
   };
 }
-var projectsList = [];
-var contentList = [];
 
-let projects = fs.readdirSync("./src/content/project"); // We read content folder to generate id
-
-if (projects.includes("out")) {
-  projects.splice(projects.indexOf("out"), 1);
-}
-
-try {
-  projectsList = JSON.parse(
-    fs.readFileSync("./src/content/project/out/projectsList.json")
-  );
-} catch (error) {
-  console.log("No projectsList found, creating new one ...");
-  projectsList = [];
-}
-
-var projectsExistsId = [];
-for (i in projects) {
-  let { metadata, content } = parseMetadata(
-    `./src/content/project/${projects[i]}`
-  );
-
-  contentData = parseContent(content);
-
-  metadata.lang = metadata.lang.toLowerCase();
-
-  let URI = contentData.title
-    .toLowerCase()
-    .replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, "")
-    .replace(" ", "-");
-
-  if (projectsExistsId.includes(URI)) {
-    for (i in projectsList) {
-      if (projectsList[i].uri == URI) {
-        projectsList[i].lang.push(metadata.lang);
-        projectsList[i].desc[metadata.lang] = contentData.content[0];
-        projectsList[i].links[metadata.lang] = contentData.links;
-        contentList[i].content[metadata.lang] = contentData.content;
-      }
-      break;
-    }
-  } else {
-    projectsExistsId.push(URI);
-    projectsList.push({
-      uri: URI,
-      tags: metadata.tags,
-      buildWith: metadata.buildWith,
-      color: metadata.color,
-      layout: metadata.layout,
-      created: metadata.created,
-      title: contentData.title,
-      media: contentData.media,
-      lang: [metadata.lang],
-      desc: { [metadata.lang]: contentData.content[0] },
-      links: { [metadata.lang]: contentData.links },
-      file: `content/project/out/projects/${URI}.json`,
-    });
-    contentList.push({
-      uri: URI,
-      content: { [metadata.lang]: contentData.content },
-    });
+function parseProjects() {
+  if (!fs.existsSync("./src/content/project/out")) {
+    fs.mkdirSync("./src/content/project/out");
   }
-}
 
-if (!fs.existsSync("./src/content/project/out/projects")) {
-  fs.mkdirSync("./src/content/project/out/projects");
-}
+  var projectsList = [];
+  var contentList = [];
+  var projectsExistsId = [];
 
-for (i in contentList) {
+  let projects = fs.readdirSync("./src/content/project"); // We read content folder to generate id
+
+  if (projects.includes("out")) {
+    projects.splice(projects.indexOf("out"), 1);
+  }
+
+  for (i in projects) {
+    let { metadata, content } = parseMetadata(
+      `./src/content/project/${projects[i]}`
+    );
+
+    contentData = parseContent(content);
+
+    metadata.lang = metadata.lang.toLowerCase();
+
+    let URI = contentData.title
+      .toLowerCase()
+      .replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, "")
+      .replace(" ", "-");
+
+    if (projectsExistsId.includes(URI)) {
+      for (i in projectsList) {
+        if (projectsList[i].uri == URI) {
+          projectsList[i].lang.push(metadata.lang);
+          projectsList[i].desc[metadata.lang] = contentData.content[0];
+          projectsList[i].links[metadata.lang] = contentData.links;
+          contentList[i].content[metadata.lang] = contentData.content;
+        }
+        break;
+      }
+    } else {
+      projectsExistsId.push(URI);
+      projectsList.push({
+        uri: URI,
+        tags: metadata.tags,
+        buildWith: metadata.buildWith,
+        color: metadata.color,
+        layout: metadata.layout,
+        created: metadata.created,
+        title: contentData.title,
+        media: contentData.media,
+        lang: [metadata.lang],
+        desc: { [metadata.lang]: contentData.content[0] },
+        links: { [metadata.lang]: contentData.links },
+        file: `content/project/out/projects/${URI}.json`,
+      });
+      contentList.push({
+        uri: URI,
+        content: { [metadata.lang]: contentData.content },
+      });
+    }
+  }
+
+  if (!fs.existsSync("./src/content/project/out/projects")) {
+    fs.mkdirSync("./src/content/project/out/projects");
+  }
+
+  for (i in contentList) {
+    fs.writeFile(
+      `./src/content/project/out/projects/${contentList[i].uri}.json`,
+      JSON.stringify(contentList[i]),
+      function (err) {
+        if (err) {
+          console.log(err);
+          throw new error(err);
+        }
+      }
+    );
+  }
+
+  projectsList.sort(function (a, b) {
+    // order by latest to oldone
+    let aDate = a["created"].toString().split("/");
+    let bDate = b["created"].toString().split("/");
+    // let bDate = Number(b["date"].toString().replace(/\//g, ""));
+    aDate = Number(aDate[2] + aDate[1] + aDate[0]);
+    bDate = Number(bDate[2] + bDate[1] + bDate[0]);
+    return bDate - aDate;
+  });
+
   fs.writeFile(
-    `./src/content/project/out/projects/${contentList[i].uri}.json`,
-    JSON.stringify(contentList[i]),
+    "./src/content/project/out/projectsList.json",
+    JSON.stringify(projectsList),
     function (err) {
       if (err) {
         console.log(err);
@@ -132,30 +150,13 @@ for (i in contentList) {
       }
     }
   );
+
+  console.log(
+    "Succesfully generated projects.json for projects",
+    `\n-> ${projectsList.length} ${projects > 1 ? "projects" : "project"}`
+  );
+
+  return projectsList.splice(0, 3);
 }
 
-projectsList.sort(function (a, b) {
-  // order by latest to oldone
-  let aDate = a["date"].toString().split("/");
-  let bDate = b["date"].toString().split("/");
-  // let bDate = Number(b["date"].toString().replace(/\//g, ""));
-  aDate = Number(aDate[2] + aDate[1] + aDate[0]);
-  bDate = Number(bDate[2] + bDate[1] + bDate[0]);
-  return bDate - aDate;
-});
-
-fs.writeFile(
-  "./src/content/project/out/postList.json",
-  JSON.stringify(projectsList),
-  function (err) {
-    if (err) {
-      console.log(err);
-      throw new error(err);
-    }
-  }
-);
-
-console.log(
-  "Succesfully generated projects.json for projects",
-  `\n-> ${projectsList.length} ${projects > 1 ? "projects" : "project"}`
-);
+module.exports = parseProjects;
