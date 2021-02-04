@@ -8,6 +8,7 @@ import {
   FaGithub as GithubIcon,
   FaTwitter as TwitterIcon,
   FaStackOverflow as StackOverflowIcon,
+  FaExternalLinkAlt as LinkIcon,
 } from "react-icons/fa";
 import { SiMinutemailer as MailIcon } from "react-icons/si";
 
@@ -141,7 +142,7 @@ class Footer extends Component {
                 defaultMessage="Source code on"
               />{" "}
               <Link to="/to/source" target="_blank">
-                GitHub
+                GitHub <LinkIcon />
               </Link>
             </div>
             <div>© 2020 ‒ Evann "LeGmask" DREUMONT</div>
