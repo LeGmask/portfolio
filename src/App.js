@@ -27,7 +27,7 @@ import translations from "./i18n/locales";
 const history = createBrowserHistory(window);
 
 if (location.hostname != "localhost") {
-  ReactGA.initialize("G-QCJMNJQCML", {
+  ReactGA.initialize("UA-188538540-1", {
     debug: false,
   });
 
