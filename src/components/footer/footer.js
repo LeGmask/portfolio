@@ -135,6 +135,15 @@ class Footer extends Component {
                 defaultMessage="powered by WordPress"
               />
             </div>
+            <div className="source">
+              <Message
+                id="footer.copyright.source"
+                defaultMessage="Source code on"
+              />{" "}
+              <Link to="/to/source" target="_blank">
+                GitHub
+              </Link>
+            </div>
             <div>© 2020 ‒ Evann "LeGmask" DREUMONT</div>
           </div>
         </div>

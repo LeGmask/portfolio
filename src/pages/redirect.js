@@ -15,7 +15,7 @@ class Redirect extends Component {
   componentDidMount() {
     switch (this.state.service) {
       case "github":
-        window.location.href = "https://github.com/legmask";
+        window.location.href = "https://github.com/LeGmask";
         break;
 
       case "twitter":
@@ -29,6 +29,10 @@ class Redirect extends Component {
 
       case "mail":
         window.location.href = "mailto:evann.dreumont@gmail.com";
+        break;
+
+      case "source":
+        window.location.href = "https://github.com/LeGmask/portfolio";
         break;
 
       default:

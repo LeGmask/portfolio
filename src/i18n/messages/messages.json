@@ -60,6 +60,11 @@
     "filepath": "src/components/footer/footer.js"
   },
   {
+    "id": "footer.copyright.source",
+    "defaultMessage": "Source code on",
+    "filepath": "src/components/footer/footer.js"
+  },
+  {
     "id": "link.nav.projects",
     "defaultMessage": "Projects",
     "filepath": "src/components/header/header.js"
