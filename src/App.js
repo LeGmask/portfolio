@@ -111,7 +111,7 @@ class App extends Component {
                   component={() => (
                     <React.Fragment>
                       <RouterRedirect to="/404" />
-                      <NotFound />
+                      <NotFound locale={this.state.locale} />
                     </React.Fragment>
                   )}
                 />
