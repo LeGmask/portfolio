@@ -86,6 +86,7 @@ function parseProjects() {
           projectsList[i].lang.push(metadata.lang);
           projectsList[i].desc[metadata.lang] = contentData.content[0];
           projectsList[i].links[metadata.lang] = contentData.links;
+          contentData.content.shift();
           contentList[i].content[metadata.lang] = contentData.content;
         }
         break;
@@ -96,7 +97,6 @@ function parseProjects() {
         uri: URI,
         tags: metadata.tags,
         buildWith: metadata.buildWith,
-        color: metadata.color,
         layout: metadata.layout,
         created: metadata.created,
         title: contentData.title,
@@ -106,6 +106,8 @@ function parseProjects() {
         links: { [metadata.lang]: contentData.links },
         file: `content/project/out/projects/${URI}.json`,
       });
+
+      contentData.content.shift();
       contentList.push({
         uri: URI,
         content: { [metadata.lang]: contentData.content },
