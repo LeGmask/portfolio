@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
+import { FormattedMessage as Message } from "react-intl";
+
+import BuildWith from "../components/buildWith/buildWith";
+import ReactHelmet from "../components/helmet/reactHelmet";
+import Beadcrumb from "../components/helmet/beadcrumb";
 
 import emoji from "remark-emoji";
 import gfm from "remark-gfm";
@@ -85,7 +90,6 @@ class ProjectPage extends Component {
               </audio>
             </figure>
           );
-          break;
 
         case "video":
           return (
@@ -101,8 +105,6 @@ class ProjectPage extends Component {
             </figure>
           );
 
-          break;
-
         default:
           return null;
       }
@@ -113,49 +115,80 @@ class ProjectPage extends Component {
 
   render() {
     let content = this.project ? (
-      <>
+      <React.Fragment>
+        <div className="project__tags">
+          {this.state.tags.map((tag) => (
+            <Link to="/projects">#{tag}</Link>
+          ))}
+        </div>
         <div className="project__title">
           <h1>{this.state.title}</h1>
         </div>
-        <div className="project__media">{this.renderMedia()}</div>
-        <div className="project__description">
-          <ReactMarkdown
-            plugins={remarkConfig.plugins}
-            className="project__description__markdown"
-          >
-            {this.state.description}
-          </ReactMarkdown>
-        </div>
-        {this.state.content.map((paragraph) => (
-          <div className="project__paragraph">
+        <div className="project__container">
+          <div className="project__media">{this.renderMedia()}</div>
+          <div className="project__description">
             <ReactMarkdown
               plugins={remarkConfig.plugins}
               className="project__description__markdown"
             >
-              {paragraph}
+              {this.state.description}
             </ReactMarkdown>
           </div>
-        ))}
-        <div className="project__links">
-          {this.state.links.map((link) => (
-            <Link to={{ pathname: link.url }}>
-              <button>{link.name}</button>
-            </Link>
+          {this.state.content.map((paragraph) => (
+            <div className="project__paragraph">
+              <ReactMarkdown
+                plugins={remarkConfig.plugins}
+                className="project__paragraph__markdown"
+              >
+                {paragraph}
+              </ReactMarkdown>
+            </div>
           ))}
         </div>
-        <div className="project__data">
-          <div className="project__data__tags">
-            {this.state.tags.map((tag) => (
-              <Link>#{tag}</Link>
-            ))}
-          </div>
+        <div className="project__links">
+          {this.state.links.map((link) => (
+            <a href={link.url}>
+              <button>{link.name}</button>
+            </a>
+          ))}
         </div>
-      </>
+        <div className="project__about">
+          <div className="project__about__title">
+            <h1>
+              <Message
+                id="project.buildwith.title"
+                defaultMessage="Build with"
+              />
+            </h1>
+          </div>
+          <div className="project__about__subtitle">
+            <Message
+              id="project.buildwith.subtitle"
+              defaultMessage="the software, frameworks, libraries, materials and services I used to make this"
+            />
+          </div>
+          <BuildWith
+            buildWith={this.state.buildWith}
+            className="project__about__buildWith"
+          />
+        </div>
+      </React.Fragment>
     ) : (
       <Redirect to="/404" />
     );
 
-    return <div className="project">{content}</div>;
+    return (
+      <div className="project">
+        <ReactHelmet
+          title={this.state.title}
+          description={this.state.description}
+          author="Evann DREUMONT"
+          keywords={this.state.tags}
+        />
+        <Beadcrumb path={window.location.pathname} />
+        {content}
+      </div>
+    );
   }
 }
 

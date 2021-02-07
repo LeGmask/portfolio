@@ -1,7 +1,7 @@
 ---
 {
-  tags: ["podcast", "alexa"],
-  buildWith: ["js", "alexa"],
+  tags: ["alexa"],
+  buildWith: ["nodejs", "alexa"],
   created: "10/01/2021",
   lang: "en",
   layout: null,

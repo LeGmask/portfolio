@@ -26,5 +26,7 @@
   "link.nav.projects": "Projets",
   "loader.loading": "Chargement ...",
   "notFound.description": "Oh non, il semblerais que la page n'existe pas",
-  "notFound.title": "404"
+  "notFound.title": "404",
+  "project.buildwith.subtitle": "les logiciels, frameworks, bibliothèques, matériaux et services utilisés pour cette création",
+  "project.buildwith.title": "Réalisé avec"
 }
