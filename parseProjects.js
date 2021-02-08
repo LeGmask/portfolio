@@ -57,7 +57,7 @@ function parseProjects() {
   }
 
   var projectsList = [];
-  var contentList = [];
+  // var contentList = [];
   var projectsExistsId = [];
 
   let projects = fs.readdirSync("./src/content/project"); // We read content folder to generate id
@@ -87,12 +87,15 @@ function parseProjects() {
           projectsList[i].desc[metadata.lang] = contentData.content[0];
           projectsList[i].links[metadata.lang] = contentData.links;
           contentData.content.shift();
-          contentList[i].content[metadata.lang] = contentData.content;
+          // contentList[i].content[metadata.lang] = contentData.content;
+          projectsList[i].content[metadata.lang] = contentData.content;
         }
         break;
       }
     } else {
       projectsExistsId.push(URI);
+      let desc = contentData.content[0];
+      contentData.content.shift();
       projectsList.push({
         uri: URI,
         tags: metadata.tags,
@@ -102,35 +105,35 @@ function parseProjects() {
         title: contentData.title,
         media: contentData.media,
         lang: [metadata.lang],
-        desc: { [metadata.lang]: contentData.content[0] },
+        desc: { [metadata.lang]: desc },
         links: { [metadata.lang]: contentData.links },
-        file: `content/project/out/projects/${URI}.json`,
-      });
-
-      contentData.content.shift();
-      contentList.push({
-        uri: URI,
         content: { [metadata.lang]: contentData.content },
       });
+
+      // contentData.content.shift();
+      // contentList.push({
+      //   uri: URI,
+      //   content: { [metadata.lang]: contentData.content },
+      // });
     }
   }
 
-  if (!fs.existsSync("./src/content/project/out/projects")) {
-    fs.mkdirSync("./src/content/project/out/projects");
-  }
+  // if (!fs.existsSync("./src/content/project/out/projects")) {
+  //   fs.mkdirSync("./src/content/project/out/projects");
+  // }
 
-  for (i in contentList) {
-    fs.writeFile(
-      `./src/content/project/out/projects/${contentList[i].uri}.json`,
-      JSON.stringify(contentList[i]),
-      function (err) {
-        if (err) {
-          console.log(err);
-          throw new error(err);
-        }
-      }
-    );
-  }
+  // for (i in contentList) {
+  //   fs.writeFile(
+  //     `./src/content/project/out/projects/${contentList[i].uri}.json`,
+  //     JSON.stringify(contentList[i]),
+  //     function (err) {
+  //       if (err) {
+  //         console.log(err);
+  //         throw new error(err);
+  //       }
+  //     }
+  //   );
+  // }
 
   projectsList.sort(function (a, b) {
     // order by latest to oldone

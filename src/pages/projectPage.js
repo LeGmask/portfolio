@@ -33,15 +33,7 @@ class ProjectPage extends Component {
   constructor(props) {
     super(props);
     var lang = props.locale;
-    var content = "No content";
-
     this.project = getProject(this.props.uri);
-
-    try {
-      content = require(`../${this.project.file}`);
-    } catch (error) {
-      content = "No content";
-    }
 
     if (this.project) {
       if (!this.project.lang.includes(props.locale)) {
@@ -56,10 +48,8 @@ class ProjectPage extends Component {
         media: this.project.media ? this.project.media : null,
         created: this.project.created ? this.project.created : null,
         links: this.project.links[lang] ? this.project.links[lang] : [],
-        description: this.project.desc[lang]
-          ? this.project.desc[lang]
-          : "No description",
-        content: content.content[lang] ? content.content[lang] : "No content",
+        description: this.project.desc[lang] ? this.project.desc[lang] : "",
+        content: this.project.content[lang] ? this.project.content[lang] : [""],
       };
 
       this.renderMedia = this.renderMedia.bind(this);
