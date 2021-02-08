@@ -106,6 +106,13 @@ class ProjectPage extends Component {
   render() {
     let content = this.project ? (
       <React.Fragment>
+        <ReactHelmet
+          title={this.state.title}
+          description={this.state.description}
+          author="Evann DREUMONT"
+          keywords={this.state.tags}
+        />
+        <Beadcrumb path={window.location.pathname} />
         <div className="project__tags">
           {this.state.tags.map((tag) => (
             <Link to="/projects">#{tag}</Link>
@@ -166,19 +173,7 @@ class ProjectPage extends Component {
     ) : (
       <Redirect to="/404" />
     );
-
-    return (
-      <div className="project">
-        <ReactHelmet
-          title={this.state.title}
-          description={this.state.description}
-          author="Evann DREUMONT"
-          keywords={this.state.tags}
-        />
-        <Beadcrumb path={window.location.pathname} />
-        {content}
-      </div>
-    );
+    return <div className="project">{content}</div>;
   }
 }
 
