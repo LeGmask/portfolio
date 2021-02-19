@@ -178,5 +178,15 @@
     "id": "project.buildwith.subtitle",
     "defaultMessage": "the software, frameworks, libraries, materials and services I used to make this",
     "filepath": "src/pages/projectPage.js"
+  },
+  {
+    "id": "link.nav.projects",
+    "defaultMessage": "Projects",
+    "filepath": "src/pages/projects.js"
+  },
+  {
+    "id": "projects.description",
+    "defaultMessage": "Find some of my projects, and description about each",
+    "filepath": "src/pages/projects.js"
   }
 ]

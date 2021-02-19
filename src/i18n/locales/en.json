@@ -28,5 +28,6 @@
   "notFound.description": "Oh no, look like the page requested doesn't exist",
   "notFound.title": "404",
   "project.buildwith.subtitle": "the software, frameworks, libraries, materials and services I used to make this",
-  "project.buildwith.title": "Build with"
+  "project.buildwith.title": "Build with",
+  "projects.description": "Find some of my projects, and description about each"
 }

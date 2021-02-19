@@ -28,5 +28,6 @@
   "notFound.description": "Oh non, il semblerais que la page n'existe pas",
   "notFound.title": "404",
   "project.buildwith.subtitle": "les logiciels, frameworks, bibliothèques, matériaux et services utilisés pour cette création",
-  "project.buildwith.title": "Réalisé avec"
+  "project.buildwith.title": "Réalisé avec",
+  "projects.description": "Retrouvez certains de mes projets, et une description de chacun d'entre eux"
 }

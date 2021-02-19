@@ -12,6 +12,7 @@ import ReactGA from "react-ga";
 import ScrollToTop from "./components/scrollToTop/scrollToTop";
 import Header from "./components/header/header";
 import Exemple from "./pages/exemple"; // Home page shouldn't have a spinner on loading
+const Projects = React.lazy(() => import("./pages/projects"));
 const ProjectPage = React.lazy(() => import("./pages/projectPage"));
 const BlogPost = React.lazy(() => import("./pages/blogPost"));
 const Blog = React.lazy(() => import("./pages/blog"));
@@ -83,6 +84,11 @@ class App extends Component {
             <Suspense fallback={<Loader />}>
               <Switch>
                 <Route exact path="/" component={Exemple} />
+                <Route
+                  exact
+                  path="/projects"
+                  component={() => <Projects locale={this.state.locale} />}
+                />
                 <Route
                   path="/projects/:uri"
                   component={(routerProps) => (
