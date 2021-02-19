@@ -60,6 +60,11 @@
     "filepath": "src/components/footer/footer.js"
   },
   {
+    "id": "footer.copyright.source",
+    "defaultMessage": "Source code on",
+    "filepath": "src/components/footer/footer.js"
+  },
+  {
     "id": "link.nav.projects",
     "defaultMessage": "Projects",
     "filepath": "src/components/header/header.js"
@@ -163,5 +168,25 @@
     "id": "notFound.description",
     "defaultMessage": "Oh no, look like the page requested doesn't exist",
     "filepath": "src/pages/notFound.js"
+  },
+  {
+    "id": "project.buildwith.title",
+    "defaultMessage": "Build with",
+    "filepath": "src/pages/projectPage.js"
+  },
+  {
+    "id": "project.buildwith.subtitle",
+    "defaultMessage": "the software, frameworks, libraries, materials and services I used to make this",
+    "filepath": "src/pages/projectPage.js"
+  },
+  {
+    "id": "link.nav.projects",
+    "defaultMessage": "Projects",
+    "filepath": "src/pages/projects.js"
+  },
+  {
+    "id": "projects.description",
+    "defaultMessage": "Find some of my projects, and description about each",
+    "filepath": "src/pages/projects.js"
   }
 ]

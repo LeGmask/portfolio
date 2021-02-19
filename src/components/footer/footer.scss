@@ -186,6 +186,33 @@ footer {
       @media screen and (max-width: 350px) {
         padding: 30px 15px;
       }
+
+      .source {
+        margin-top: 5px;
+        a {
+          display: inline-flex;
+          justify-content: center;
+          text-decoration: none;
+          cursor: pointer;
+          color: $nord6;
+          svg {
+            margin-left: 2px;
+            font-size: 15px;
+            margin-top: 2px;
+          }
+          &:hover {
+            transition: all 0.3s ease-in-out 0s;
+            color: rgb(136, 192, 208);
+            text-decoration: underline;
+          }
+        }
+        a:active,
+        a:focus,
+        a:hover,
+        a:visited {
+          outline: currentcolor none medium;
+        }
+      }
     }
   }
 

@@ -14,6 +14,7 @@
   "contact.twitter": "Glisse dans mes dms twitter",
   "footer.copyright.build": "Fait avec passion par moi-même",
   "footer.copyright.notAtAll": "Pas du tout",
+  "footer.copyright.source": "Code source sur",
   "footer.copyright.wordpress": "propulsé par WordPress",
   "footer.flag": "🇫🇷",
   "footer.language": "Français",
@@ -25,5 +26,8 @@
   "link.nav.projects": "Projets",
   "loader.loading": "Chargement ...",
   "notFound.description": "Oh non, il semblerais que la page n'existe pas",
-  "notFound.title": "404"
+  "notFound.title": "404",
+  "project.buildwith.subtitle": "les logiciels, frameworks, bibliothèques, matériaux et services utilisés pour cette création",
+  "project.buildwith.title": "Réalisé avec",
+  "projects.description": "Retrouvez certains de mes projets, et une description de chacun d'entre eux"
 }

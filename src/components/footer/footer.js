@@ -8,6 +8,7 @@ import {
   FaGithub as GithubIcon,
   FaTwitter as TwitterIcon,
   FaStackOverflow as StackOverflowIcon,
+  FaExternalLinkAlt as LinkIcon,
 } from "react-icons/fa";
 import { SiMinutemailer as MailIcon } from "react-icons/si";
 
@@ -134,6 +135,15 @@ class Footer extends Component {
                 id="footer.copyright.wordpress"
                 defaultMessage="powered by WordPress"
               />
+            </div>
+            <div className="source">
+              <Message
+                id="footer.copyright.source"
+                defaultMessage="Source code on"
+              />{" "}
+              <Link to="/to/source" target="_blank">
+                GitHub <LinkIcon />
+              </Link>
             </div>
             <div>© 2020 ‒ Evann "LeGmask" DREUMONT</div>
           </div>

@@ -33,9 +33,9 @@
     "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "prestart": "node parseArticle.js",
+    "prestart": "node staticGenerator.js",
     "start": "react-scripts start",
-    "prebuild": "node parseArticle.js",
+    "prebuild": "node staticGenerator.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
