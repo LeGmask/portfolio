@@ -1,0 +1,61 @@
+@import "../../scss/color";
+
+.cookieConsent {
+  display: flex;
+  background-color: rgba($nord2, 0.85);
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  margin: 10px;
+  z-index: 4000;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  max-width: 240px;
+  color: $nord5;
+
+  &__control {
+    position: fixed;
+    right: 5px;
+    top: 5px;
+    height: 1.2em;
+    width: auto;
+    cursor: pointer;
+    fill: $nord11;
+    transition: all ease-in-out 0.2s;
+
+    &:hover {
+      fill: darken($nord11, 5%);
+    }
+  }
+
+  &__container {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    margin-left: 5px;
+    &__title h1 {
+      margin-bottom: 5px;
+      align-self: center;
+      font-size: 20px;
+      margin: 0px;
+    }
+
+    &__description p {
+      margin: 0px;
+      margin-right: 10px;
+      font-size: 13px;
+      font-weight: 300;
+    }
+  }
+
+  &__icon img {
+    margin: 5px;
+    fill: $nord5;
+    width: auto;
+    height: 3em;
+  }
+}
