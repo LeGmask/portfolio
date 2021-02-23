@@ -23,7 +23,7 @@
     "react-lottie": "^1.2.3",
     "react-markdown": "^5.0.3",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.2",
+    "react-scripts": "4.0.3",
     "react-syntax-highlighter": "^15.4.3",
     "rehype-katex": "^4.0.0",
     "remark-emoji": "^2.1.0",
@@ -64,7 +64,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^12.7.1",
+    "@testing-library/user-event": "^12.7.2",
     "eslint": "^7.20.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-node": "^4.1.0",
