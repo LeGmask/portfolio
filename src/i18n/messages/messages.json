@@ -160,13 +160,13 @@
     "filepath": "src/pages/exemple.js"
   },
   {
-    "id": "notFound.title",
-    "defaultMessage": "404",
+    "id": "notFound.story",
+    "defaultMessage": "One day, somewhere in the space...",
     "filepath": "src/pages/notFound.js"
   },
   {
-    "id": "notFound.description",
-    "defaultMessage": "Oh no, look like the page requested doesn't exist",
+    "id": "notFound.message",
+    "defaultMessage": "...Oh no, that's not the page you were looking for.",
     "filepath": "src/pages/notFound.js"
   },
   {
