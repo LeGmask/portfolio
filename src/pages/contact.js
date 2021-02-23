@@ -32,7 +32,6 @@ class Contact extends Component {
 
   handleCopy() {
     navigator.clipboard.writeText(this.state.discordId);
-    console.log("ok");
     this.setState({ popup: "Copié" });
     setTimeout(() => {
       this.handlePopup();

@@ -10,6 +10,7 @@ import { HelmetProvider } from "react-helmet-async";
 import ReactGA from "react-ga";
 
 import ScrollToTop from "./components/scrollToTop/scrollToTop";
+import CookieConsent from "./components/cookieConsent/cookieConsent";
 import Header from "./components/header/header";
 import Exemple from "./pages/exemple"; // Home page shouldn't have a spinner on loading
 const Projects = React.lazy(() => import("./pages/projects"));
@@ -80,6 +81,7 @@ class App extends Component {
         <IntlProvider locale={this.state.locale} messages={this.state.messages}>
           <Router history={history}>
             <ScrollToTop />
+            <CookieConsent />
             <Header />
             <Suspense fallback={<Loader />}>
               <Switch>
