@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { FormattedMessage as Message } from "react-intl";
+import ReactGA from "react-ga";
 
 import ReactHelmet from "../components/helmet/reactHelmet";
 import Beadcrumb from "../components/helmet/beadcrumb";
@@ -99,6 +100,12 @@ class About extends Component {
             </div>
             <div className="about__card__control__links">
               <Link
+                onClick={() =>
+                  ReactGA.event({
+                    category: "Download",
+                    action: "Download CV",
+                  })
+                }
                 to={{
                   pathname:
                     "https://drive.google.com/uc?id=1SOJ_9uzTxb7jVKYi7XrfsuWA3pVfWIRc&export=download",
