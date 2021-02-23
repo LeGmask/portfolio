@@ -69,7 +69,7 @@
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-node": "^4.1.0",
     "eslint-config-prettier": "^8.0.0",
-    "eslint-plugin-mdx": "^1.8.2",
+    "eslint-plugin-mdx": "^1.9.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.3.1",
     "prettier": "^2.2.1",
