@@ -5,6 +5,16 @@
     "filepath": "src/components/blogCard/blogCard.js"
   },
   {
+    "id": "cookieConsent.title",
+    "defaultMessage": "I use cookies",
+    "filepath": "src/components/cookieConsent/cookieConsent.js"
+  },
+  {
+    "id": "cookieConsent.description",
+    "defaultMessage": "I love cookies, I hope you love them too.",
+    "filepath": "src/components/cookieConsent/cookieConsent.js"
+  },
+  {
     "id": "footer.language",
     "defaultMessage": "English",
     "filepath": "src/components/footer/footer.js"
