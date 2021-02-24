@@ -12,7 +12,10 @@
 
   &__illustration {
     width: 20em;
-    &__cloud {
+    &__cloudTop {
+      animation: 4000ms ease-in-out 1200ms infinite alternate none running cloud;
+    }
+    &__cloudBottom {
       animation: 4000ms ease-in-out 0s infinite alternate none running cloud;
     }
   }
