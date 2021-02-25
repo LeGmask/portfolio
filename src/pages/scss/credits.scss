@@ -1,0 +1,27 @@
+@import "../../scss/color";
+
+.credits {
+  background-color: #292e39;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $nord6;
+
+  &__item h3 {
+    font-weight: 300;
+  }
+
+  a:visited,
+  a:link {
+    color: $nord6;
+    text-decoration: underline;
+    font-style: italic;
+    outline: none;
+  }
+
+  a:hover {
+    transition: all 0.3s ease-in-out;
+    color: $nord8;
+  }
+}
