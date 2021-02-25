@@ -7,7 +7,7 @@ import ReactHelmet from "../components/helmet/reactHelmet";
 
 import translations from "../i18n/locales";
 
-import postList from "../content/blog/postList.json";
+import postList from "../content/blog/out/postList.json";
 
 import "./scss/blog.scss";
 

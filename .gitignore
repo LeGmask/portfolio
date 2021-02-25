@@ -135,6 +135,5 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-#List of articles
-src/content/blog/articles/*
-src/content/*.json
+#List of articles/projects
+src/content/home.json

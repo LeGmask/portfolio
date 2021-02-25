@@ -5,7 +5,7 @@ import Markdown from "../components/markdownComponent/markdownComponent";
 import ReactHelmet from "../components/helmet/reactHelmet";
 import Beadcrumb from "../components/helmet/beadcrumb";
 
-import postList from "../content/blog/postList.json";
+import postList from "../content/blog/out/postList.json";
 
 import "./scss/blogPost.scss";
 
@@ -23,15 +23,8 @@ class BlogPost extends Component {
   constructor(props) {
     super(props);
     var lang = props.locale;
-    var content = "No content";
 
     this.post = getPost(this.props.postId);
-
-    try {
-      content = require(`../${this.post.file}`);
-    } catch (error) {
-      content = "No content";
-    }
 
     if (this.post) {
       if (!this.post.lang.includes(props.locale)) {
@@ -46,7 +39,9 @@ class BlogPost extends Component {
         date: this.post.date ? this.post.date : "No date",
         author: this.post.author ? this.post.author : "No author",
         image: this.post.image ? this.post.image : false,
-        content: content.content[lang] ? content.content[lang] : "No content",
+        content: this.post.content[lang]
+          ? this.post.content[lang]
+          : "No content",
       };
     }
   }

@@ -21,24 +21,15 @@ function parseMetadata(path) {
 }
 
 function parseArticles() {
+  if (!fs.existsSync("./src/content/blog/out")) {
+    fs.mkdirSync("./src/content/blog/out");
+  }
   var postList = [];
-  var contentList = [];
 
   let articles = fs.readdirSync("./src/content/blog"); // We read content folder to generate id
 
-  if (articles.includes("postList.json")) {
-    // we remove list if she already exist
-    articles.splice(articles.indexOf("postList.json"), 1);
-  }
-  if (articles.includes("articles")) {
-    articles.splice(articles.indexOf("articles"), 1);
-  }
-
-  try {
-    postList = JSON.parse(fs.readFileSync("./src/content/blog/postList.json"));
-  } catch (error) {
-    console.log("No postList found, creating new one ...");
-    postList = [];
+  if (articles.includes("out")) {
+    articles.splice(articles.indexOf("out"), 1);
   }
 
   for (i in articles) {
@@ -60,7 +51,7 @@ function parseArticles() {
             postList[i].lang.push(metadata.lang);
             postList[i].name[metadata.lang] = metadata.name;
             postList[i].synopsis[metadata.lang] = metadata.synopsis;
-            contentList[i].content[metadata.lang] = content;
+            postList[i].content[metadata.lang] = content;
           }
           break;
         }
@@ -74,30 +65,9 @@ function parseArticles() {
         synopsis: { [metadata.lang]: metadata.synopsis },
         lang: [metadata.lang],
         image: metadata.image,
-        file: `content/blog/articles/${metadata.id}.json`,
-      });
-      contentList.push({
-        name: metadata.id,
         content: { [metadata.lang]: content },
       });
     }
-  }
-
-  if (!fs.existsSync("./src/content/blog/articles")) {
-    fs.mkdirSync("./src/content/blog/articles");
-  }
-
-  for (i in contentList) {
-    fs.writeFile(
-      `./src/content/blog/articles/${contentList[i].name}.json`,
-      JSON.stringify(contentList[i]),
-      function (err) {
-        if (err) {
-          console.log(err);
-          throw new error(err);
-        }
-      }
-    );
   }
 
   postList.sort(function (a, b) {
@@ -111,7 +81,7 @@ function parseArticles() {
   });
 
   fs.writeFile(
-    "./src/content/blog/postList.json",
+    "./src/content/blog/out/postList.json",
     JSON.stringify(postList),
     function (err) {
       if (err) {
