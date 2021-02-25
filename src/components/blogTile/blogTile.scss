@@ -1,14 +1,14 @@
 @import "../../scss/color";
 @import "../../scss/animation";
 
-a:visited,
-a:link {
-  color: $nord6;
-  text-decoration: none;
-  outline: none;
-}
-
 .blog__tile {
+  &:visited,
+  &:link {
+    color: $nord6;
+    text-decoration: none;
+    outline: none;
+  }
+
   margin: 10px;
   background-color: $nord3;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
