@@ -1,7 +1,7 @@
 ---
 {
   tags: ["alexa"],
-  buildWith: ["nodejs", "alexa"],
+  builtWith: ["nodejs", "alexa"],
   created: "10/01/2021",
   lang: "en",
   layout: null,

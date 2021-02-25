@@ -10,7 +10,7 @@ class ProjectCard extends Component {
     this.state = {
       uri: this.props.uri,
       tags: this.props.tags,
-      buildWith: this.props.buildWith,
+      builtWith: this.props.builtWith,
       title: this.props.title,
       description: this.props.description,
       created: this.props.created,

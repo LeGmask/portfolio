@@ -29,7 +29,7 @@
   "loader.loading": "Chargement ...",
   "notFound.message": "...Oh non, ce n'est pas la page que vous cherchiez.",
   "notFound.story": "Un jour, quelque part dans l'espace...",
-  "project.buildwith.subtitle": "les logiciels, frameworks, bibliothèques, matériaux et services utilisés pour cette création",
-  "project.buildwith.title": "Réalisé avec",
+  "project.builtWith.subtitle": "les logiciels, frameworks, bibliothèques, matériaux et services utilisés pour cette création",
+  "project.builtWith.title": "Réalisé avec",
   "projects.description": "Retrouvez certains de mes projets, et une description de chacun d'entre eux"
 }

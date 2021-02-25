@@ -17,12 +17,12 @@ import {
 } from "react-icons/di";
 import { SiAmazonalexa as Alexa } from "react-icons/si";
 
-class BuildWith extends Component {
+class BuiltWith extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      buildWith: this.props.buildWith,
+      builtWith: this.props.builtWith,
     };
 
     this.generateIcon = this.generateIcon.bind(this);
@@ -83,16 +83,16 @@ class BuildWith extends Component {
   render() {
     return (
       <div className={this.props.className}>
-        {this.state.buildWith.map(
-          (buildWith) =>
+        {this.state.builtWith.map(
+          (builtWith) =>
             /* <div className={this.props.className + "__icon"}> */
-            this.generateIcon(buildWith)
+            this.generateIcon(builtWith)
           /* </div> */
-          /* <div className={this.props.className + "__name"}>{buildWith}</div> */
+          /* <div className={this.props.className + "__name"}>{builtWith}</div> */
         )}
       </div>
     );
   }
 }
 
-export default BuildWith;
+export default BuiltWith;

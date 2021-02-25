@@ -180,12 +180,12 @@
     "filepath": "src/pages/notFound.js"
   },
   {
-    "id": "project.buildwith.title",
+    "id": "project.builtWith.title",
     "defaultMessage": "Build with",
     "filepath": "src/pages/projectPage.js"
   },
   {
-    "id": "project.buildwith.subtitle",
+    "id": "project.builtWith.subtitle",
     "defaultMessage": "the software, frameworks, libraries, materials and services I used to make this",
     "filepath": "src/pages/projectPage.js"
   },
