@@ -9,8 +9,6 @@ import BlogTile from "../components/blogTile/blogTile";
 import { ReactComponent as Separator1 } from "../images/home__separator1.svg";
 import { ReactComponent as Separator2 } from "../images/home__separator2.svg";
 
-import translations from "../i18n/locales";
-
 import content from "../content/home.json";
 
 import "./scss/home.scss";
@@ -33,8 +31,23 @@ class Home extends Component {
   }
 
   render() {
+    let description = {
+      fr:
+        "Mon site-web/portfolio personel. Découvrez mes différents projets et des post en liens avec le digital",
+      en:
+        "My personal website/portfolio. Discover my differents projects and some story about digital",
+    };
     return (
       <main className="home">
+        <ReactHelmet
+          description={description[this.props.locale]}
+          author="Evann DREUMONT"
+          keywords={["portfolio", "blog", "projects", "Evann DREUMONT"]}
+        />
+        <Beadcrumb
+          path={window.location.pathname}
+          origin={window.location.origin}
+        />
         <section className="home__presentation">
           <div className="home__presentation__container">
             <div className="home__presentation__content">
@@ -121,7 +134,7 @@ class Home extends Component {
               <h2>
                 <Message
                   id="home.blog.title"
-                  defaultMessage="Latest articles on my blog :"
+                  defaultMessage="Latest articles on my blog:"
                 />
               </h2>
               <p>
