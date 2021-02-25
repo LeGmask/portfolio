@@ -1,7 +1,7 @@
 ---
 {
   tags: ["alexa"],
-  buildWith: ["nodejs", "alexa"],
+  builtWith: ["nodejs", "alexa"],
   created: "10/01/2021",
   lang: "fr",
   layout: null,
@@ -14,7 +14,7 @@
 
 <!-- ![image:MyPodcast](https://images-na.ssl-images-amazon.com/images/I/71vCwOUSqRL.png) -->
 
-Ecouter vos podcast directement sur Alexa et peut importe leurs sources.
+Ecouter vos podcast directement sur Alexa et peu importe leurs sources.
 
 A l'origine cette skill a été crée pour ma soeur afin de l'aider a écouter ces podcasts sur sont alexa. Mais finalement après quelques heures de developpement elle est enfin publique, allez voir !
 

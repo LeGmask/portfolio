@@ -61,7 +61,7 @@ class Projects extends Component {
                 <ProjectCard
                   uri={`/projects/${project.uri}`}
                   tags={project.tags}
-                  buildWith={project.buildWith}
+                  builtWith={project.builtWith}
                   title={project.title}
                   description={project.desc[lang]}
                   created={project.created}

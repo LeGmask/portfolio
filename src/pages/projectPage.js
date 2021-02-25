@@ -3,7 +3,7 @@ import { Link, Redirect } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import { FormattedMessage as Message } from "react-intl";
 
-import BuildWith from "../components/buildWith/buildWith";
+import BuiltWith from "../components/builtWith/builtWith";
 import ReactHelmet from "../components/helmet/reactHelmet";
 import Beadcrumb from "../components/helmet/beadcrumb";
 
@@ -43,7 +43,7 @@ class ProjectPage extends Component {
       this.state = {
         uri: this.props.uri,
         tags: this.project.tags ? this.project.tags : [],
-        buildWith: this.project.buildWith ? this.project.buildWith : [],
+        builtWith: this.project.builtWith ? this.project.builtWith : [],
         title: this.project.title ? this.project.title : "No title",
         media: this.project.media ? this.project.media : null,
         created: this.project.created ? this.project.created : null,
@@ -153,20 +153,20 @@ class ProjectPage extends Component {
           <div className="project__about__title">
             <h1>
               <Message
-                id="project.buildwith.title"
+                id="project.builtWith.title"
                 defaultMessage="Build with"
               />
             </h1>
           </div>
           <div className="project__about__subtitle">
             <Message
-              id="project.buildwith.subtitle"
+              id="project.builtWith.subtitle"
               defaultMessage="the software, frameworks, libraries, materials and services I used to make this"
             />
           </div>
-          <BuildWith
-            buildWith={this.state.buildWith}
-            className="project__about__buildWith"
+          <BuiltWith
+            builtWith={this.state.builtWith}
+            className="project__about__builtWith"
           />
         </div>
       </React.Fragment>

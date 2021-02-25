@@ -1,0 +1,67 @@
+@import "../../scss/color";
+@import "../../scss/animation";
+
+a:visited,
+a:link {
+  color: $nord6;
+  text-decoration: none;
+  outline: none;
+}
+
+.blog__tile {
+  margin: 10px;
+  background-color: $nord3;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  //   height: 100%;
+  max-width: 300px;
+
+  &__metadata {
+    margin: 0px 10px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+  }
+
+  &__img {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 10px;
+    padding-bottom: 0px;
+
+    img {
+      border-radius: 5px;
+      max-width: 300;
+      max-height: 150px;
+    }
+  }
+
+  &__content {
+    margin: 10px 0px;
+    &__title {
+      h4 {
+        font-size: 20px;
+        text-decoration: underline;
+        margin: 5px 10px;
+      }
+    }
+
+    &__synopsis {
+      font-weight: 300;
+      margin: 0px 10px;
+      text-align: justify;
+    }
+  }
+
+  &:hover {
+    animation: hover-feedback 0.3s;
+  }
+}

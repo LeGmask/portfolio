@@ -99,7 +99,7 @@ function parseProjects() {
       projectsList.push({
         uri: URI,
         tags: metadata.tags,
-        buildWith: metadata.buildWith,
+        builtWith: metadata.builtWith,
         layout: metadata.layout,
         created: metadata.created,
         title: contentData.title,

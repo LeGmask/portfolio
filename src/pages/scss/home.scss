@@ -1,0 +1,188 @@
+@import "../../scss/color";
+
+.home {
+  background-color: #292e39;
+
+  &__separator {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: transparent;
+    display: block;
+    user-select: none;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  &__presentation {
+    &__container {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      align-content: center;
+      justify-content: center;
+      padding: 50px;
+    }
+
+    &__content {
+      padding: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-between;
+      color: $nord6;
+
+      h1 {
+        font-size: 30px;
+        text-align: center;
+      }
+
+      p {
+        font-size: 25px;
+      }
+
+      p:last-child {
+        text-align: right;
+      }
+    }
+
+    &__profile {
+      padding: 30px;
+      img {
+        border-radius: 100%;
+      }
+    }
+
+    svg {
+      fill: $nord0;
+    }
+  }
+
+  &__projects {
+    background-color: $nord0;
+
+    &__title {
+      display: grid;
+      flex-wrap: wrap;
+      align-items: center;
+      // justify-content: center;
+      padding: 0px 30px;
+      color: $nord5;
+      width: 100%;
+      max-width: 900px;
+
+      h2 {
+        justify-self: left;
+        font-size: 25px;
+        margin: 0px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin: 0px;
+        justify-self: right;
+        color: $nord4;
+        font-size: 20px;
+        max-width: 550px;
+        font-weight: 300;
+        font-style: italic;
+        text-align: right;
+
+        &::before {
+          content: "🙶";
+          position: relative;
+          right: 3px;
+          bottom: 5px;
+        }
+
+        &::after {
+          content: "🙸";
+          position: relative;
+          left: 3px;
+          top: 5px;
+        }
+      }
+    }
+
+    &__container {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      padding: 20px 0px;
+    }
+
+    &__tiles {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: stretch;
+      justify-content: space-around;
+      margin: 20px;
+    }
+
+    svg {
+      fill: #292e39;
+    }
+  }
+
+  &__blog {
+    &__title {
+      display: grid;
+      flex-wrap: wrap;
+      align-items: center;
+      // justify-content: center;
+      padding: 0px 30px;
+      color: $nord5;
+      width: 100%;
+      max-width: 900px;
+
+      h2 {
+        justify-self: right;
+        text-align: right;
+        font-size: 25px;
+        margin: 0px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin: 0px;
+        justify-self: left;
+        color: $nord4;
+        font-size: 20px;
+        max-width: 550px;
+        font-weight: 300;
+        font-style: italic;
+        text-align: left;
+
+        &::before {
+          content: "🙶";
+          position: relative;
+          right: 3px;
+          bottom: 5px;
+        }
+
+        &::after {
+          content: "🙸";
+          position: relative;
+          left: 3px;
+          top: 5px;
+        }
+      }
+    }
+
+    &__container {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      padding: 20px 0px;
+    }
+
+    &__tiles {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: space-around;
+      margin: 20px;
+      margin-bottom: 40px;
+    }
+  }
+}

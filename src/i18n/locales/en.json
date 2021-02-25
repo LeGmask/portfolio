@@ -29,7 +29,7 @@
   "loader.loading": "Loading ...",
   "notFound.message": "...Oh no, that's not the page you were looking for.",
   "notFound.story": "One day, somewhere in the space...",
-  "project.buildwith.subtitle": "the software, frameworks, libraries, materials and services I used to make this",
-  "project.buildwith.title": "Build with",
+  "project.builtWith.subtitle": "the software, frameworks, libraries, materials and services I used to make this",
+  "project.builtWith.title": "Build with",
   "projects.description": "Find some of my projects, and description about each"
 }
