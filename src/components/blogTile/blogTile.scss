@@ -39,8 +39,9 @@
 
     img {
       border-radius: 5px;
-      max-width: 300;
       max-height: 150px;
+      object-fit: contain;
+      width: 100%;
     }
   }
 
