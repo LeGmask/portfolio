@@ -2,6 +2,16 @@
 @import "../../scss/animation";
 
 .card {
+  &:visited,
+  &:link {
+    color: $nord6;
+    text-decoration: none;
+    outline: none;
+  }
+  &:hover {
+    animation: hover-feedback 0.3s;
+  }
+
   display: flex;
   flex-direction: column;
   max-width: 900px;
@@ -12,11 +22,6 @@
   background-color: $nord2;
 
   &__content {
-    a:visited,
-    a:link {
-      color: $nord6;
-      text-decoration: none;
-    }
     display: flex;
 
     @media screen and (max-width: 900px) {
@@ -61,11 +66,6 @@
   }
 
   &__control {
-    a:visited,
-    a:link {
-      color: $nord6;
-      text-decoration: none;
-    }
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -79,32 +79,6 @@
       font-weight: 200;
       font-size: small;
       font-style: italic;
-    }
-
-    button {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      padding: 10px;
-      border-radius: 10px;
-      border: none;
-      color: $nord6;
-      background-color: $nord2;
-      border: 1px solid rgba(255, 255, 255, 0);
-      outline: none;
-      font-size: 18px;
-      padding: 8px 12px;
-      cursor: pointer;
-      &:hover {
-        border: 1px solid $nord4;
-        background-color: $nord3;
-        transition: all 0.3s;
-        animation: hover-feedback 0.3s;
-      }
-
-      svg {
-        padding-right: 5px;
-      }
     }
   }
 }

@@ -21,13 +21,11 @@ class BlogCard extends Component {
   }
   render() {
     return (
-      <div className="card">
+      <Link to={this.state.link} className="card">
         <div className="card__content">
           <div className="card__content__metadata">
             <div className="card__content__metadata__title">
-              <h1>
-                <Link to={this.state.link}>{this.state.title}</Link>
-              </h1>
+              <h1>{this.state.title}</h1>
             </div>
             <div className="card__content__metadata__synopsis">
               <p>{this.state.synopsis}</p>
@@ -41,14 +39,8 @@ class BlogCard extends Component {
           <div className="card__control__date">
             {this.state.date ? this.state.date : ""}
           </div>
-          <Link to={this.state.link}>
-            <button>
-              <Read />
-              <FormattedMessage id="blog.read" defaultMessage="Read" />
-            </button>
-          </Link>
         </div>
-      </div>
+      </Link>
     );
   }
 }
