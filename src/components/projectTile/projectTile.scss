@@ -41,7 +41,9 @@
 
     &__img img {
       height: 5em;
-      width: 100%;
+      width: auto;
+      object-fit: contain;
+      margin-left: 5px;
     }
   }
 
