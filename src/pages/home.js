@@ -67,7 +67,7 @@ class Home extends Component {
               <p>
                 <Message
                   id="home.presentation.bio2"
-                  defaultMessage=" I also love music, and calculator."
+                  defaultMessage=" I also love music, and calculators."
                 />
               </p>
             </div>
