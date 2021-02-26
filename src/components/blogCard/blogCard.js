@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { FormattedMessage } from "react-intl";
-
-import { IoReaderOutline as Read } from "react-icons/io5";
 
 import "./blogCard.scss";
 
