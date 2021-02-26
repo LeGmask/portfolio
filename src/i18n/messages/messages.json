@@ -1,10 +1,5 @@
 [
   {
-    "id": "blog.read",
-    "defaultMessage": "Read",
-    "filepath": "src/components/blogCard/blogCard.js"
-  },
-  {
     "id": "cookieConsent.title",
     "defaultMessage": "I use cookies",
     "filepath": "src/components/cookieConsent/cookieConsent.js"
@@ -100,6 +95,11 @@
     "filepath": "src/components/loader/loader.js"
   },
   {
+    "id": "home.projects.tile.builtWith",
+    "defaultMessage": "Built with:",
+    "filepath": "src/components/projectTile/projectTile.js"
+  },
+  {
     "id": "about.title",
     "defaultMessage": "About me",
     "filepath": "src/pages/about.js"
@@ -165,9 +165,84 @@
     "filepath": "src/pages/contact.js"
   },
   {
+    "id": "credits.title",
+    "defaultMessage": "Thanks to:",
+    "filepath": "src/pages/credits.js"
+  },
+  {
+    "id": "credits.font",
+    "defaultMessage": ", a beautiful Open Font License typeface.",
+    "filepath": "src/pages/credits.js"
+  },
+  {
+    "id": "credits.gravatar",
+    "defaultMessage": ", a web service for profile picture hosting.",
+    "filepath": "src/pages/credits.js"
+  },
+  {
+    "id": "credits.imgur",
+    "defaultMessage": ", a web service for images hosting.",
+    "filepath": "src/pages/credits.js"
+  },
+  {
+    "id": "credits.nord",
+    "defaultMessage": ", a color scheme.",
+    "filepath": "src/pages/credits.js"
+  },
+  {
+    "id": "credits.vercel",
+    "defaultMessage": ", for website hosting.",
+    "filepath": "src/pages/credits.js"
+  },
+  {
+    "id": "credits.builtWith",
+    "defaultMessage": ", an efficient and comfortable programming language.",
+    "filepath": "src/pages/credits.js"
+  },
+  {
+    "id": "credits.ownMade",
+    "defaultMessage": "Built myself by hand with love",
+    "filepath": "src/pages/credits.js"
+  },
+  {
     "id": "Home.welcome",
     "defaultMessage": "Edit <code>src/App.js</code> and save to reload.",
     "filepath": "src/pages/exemple.js"
+  },
+  {
+    "id": "home.presentation.welcome",
+    "defaultMessage": "Hi! I'm Evann DREUMONT!",
+    "filepath": "src/pages/home.js"
+  },
+  {
+    "id": "home.presentation.bio1",
+    "defaultMessage": "I'm {age} years old and I'm interested in almost anything that is digital.",
+    "filepath": "src/pages/home.js"
+  },
+  {
+    "id": "home.presentation.bio2",
+    "defaultMessage": "I also love music, and calculator.",
+    "filepath": "src/pages/home.js"
+  },
+  {
+    "id": "home.projects.title",
+    "defaultMessage": "Latest projects:",
+    "filepath": "src/pages/home.js"
+  },
+  {
+    "id": "home.projects.description",
+    "defaultMessage": "I love coding things to make my everydays task easier, here are the latest, you can find more on the projects tab !",
+    "filepath": "src/pages/home.js"
+  },
+  {
+    "id": "home.blog.title",
+    "defaultMessage": "Latest articles on my blog:",
+    "filepath": "src/pages/home.js"
+  },
+  {
+    "id": "home.blog.description",
+    "defaultMessage": "Read about my latest coding adventure, or digital exploration",
+    "filepath": "src/pages/home.js"
   },
   {
     "id": "notFound.story",

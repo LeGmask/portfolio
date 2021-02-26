@@ -81,7 +81,12 @@ class Credits extends Component {
         </ul>
         <div className="credits__ownMade">
           <Link to="/to/source">
-            <h3>Built myself by hand with love</h3>
+            <h3>
+              <Message
+                id="credits.ownMade"
+                defaultMessage="Built myself by hand with love"
+              />
+            </h3>
           </Link>
         </div>
       </div>
