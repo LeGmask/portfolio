@@ -11,7 +11,7 @@ import emoji from "remark-emoji";
 import gfm from "remark-gfm";
 import images from "remark-images";
 
-import projectList from "../content/project/out/projectsList.json";
+import projectList from "../content/projects/out/projectsList.json";
 
 import "./scss/projectPage.scss";
 

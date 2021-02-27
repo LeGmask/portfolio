@@ -52,15 +52,15 @@ function parseContent(content) {
 }
 
 function parseProjects() {
-  if (!fs.existsSync("./src/content/project/out")) {
-    fs.mkdirSync("./src/content/project/out");
+  if (!fs.existsSync("./src/content/projects/out")) {
+    fs.mkdirSync("./src/content/projects/out");
   }
 
   var projectsList = [];
   // var contentList = [];
   var projectsExistsId = [];
 
-  let projects = fs.readdirSync("./src/content/project"); // We read content folder to generate id
+  let projects = fs.readdirSync("./src/content/projects"); // We read content folder to generate id
 
   if (projects.includes("out")) {
     projects.splice(projects.indexOf("out"), 1);
@@ -68,7 +68,7 @@ function parseProjects() {
 
   for (i in projects) {
     let { metadata, content } = parseMetadata(
-      `./src/content/project/${projects[i]}`
+      `./src/content/projects/${projects[i]}`
     );
 
     contentData = parseContent(content);
@@ -109,31 +109,8 @@ function parseProjects() {
         links: { [metadata.lang]: contentData.links },
         content: { [metadata.lang]: contentData.content },
       });
-
-      // contentData.content.shift();
-      // contentList.push({
-      //   uri: URI,
-      //   content: { [metadata.lang]: contentData.content },
-      // });
     }
   }
-
-  // if (!fs.existsSync("./src/content/project/out/projects")) {
-  //   fs.mkdirSync("./src/content/project/out/projects");
-  // }
-
-  // for (i in contentList) {
-  //   fs.writeFile(
-  //     `./src/content/project/out/projects/${contentList[i].uri}.json`,
-  //     JSON.stringify(contentList[i]),
-  //     function (err) {
-  //       if (err) {
-  //         console.log(err);
-  //         throw new error(err);
-  //       }
-  //     }
-  //   );
-  // }
 
   projectsList.sort(function (a, b) {
     // order by latest to oldone
@@ -146,7 +123,7 @@ function parseProjects() {
   });
 
   fs.writeFile(
-    "./src/content/project/out/projectsList.json",
+    "./src/content/projects/out/projectsList.json",
     JSON.stringify(projectsList),
     function (err) {
       if (err) {

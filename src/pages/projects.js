@@ -5,7 +5,7 @@ import Beadcrumb from "../components/helmet/beadcrumb";
 import ReactHelmet from "../components/helmet/reactHelmet";
 import ProjectCard from "../components/projectCard/projectCard";
 
-import projectsList from "../content/project/out/projectsList.json";
+import projectsList from "../content/projects/out/projectsList.json";
 
 import translations from "../i18n/locales";
 
