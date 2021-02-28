@@ -76,6 +76,19 @@
     font-weight: 300;
     font-size: 1.15rem;
     max-width: 700px;
+    a {
+      color: $nord8;
+      text-decoration: none;
+
+      &:active,
+      &:hover {
+        outline-width: 0;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   &__links {
