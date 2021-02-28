@@ -75,10 +75,12 @@ function parseProjects() {
 
     metadata.lang = metadata.lang.toLowerCase();
 
-    let URI = contentData.title
-      .toLowerCase()
-      .replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, "")
-      .replace(" ", "-");
+    let URI = encodeURI(
+      contentData.title
+        .toLowerCase()
+        .replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, "")
+        .replace(" ", "-")
+    );
     if (projectsExistsId.includes(URI)) {
       for (j in projectsList) {
         if (projectsList[j].uri == URI) {
