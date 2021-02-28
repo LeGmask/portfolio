@@ -72,9 +72,10 @@
   }
 
   &__paragraph {
-    text-align: center;
+    text-align: justify;
     font-weight: 300;
     font-size: 1.15rem;
+    max-width: 700px;
   }
 
   &__links {
