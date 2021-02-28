@@ -79,18 +79,16 @@ function parseProjects() {
       .toLowerCase()
       .replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, "")
       .replace(" ", "-");
-
     if (projectsExistsId.includes(URI)) {
-      for (i in projectsList) {
-        if (projectsList[i].uri == URI) {
-          projectsList[i].lang.push(metadata.lang);
-          projectsList[i].desc[metadata.lang] = contentData.content[0];
-          projectsList[i].links[metadata.lang] = contentData.links;
+      for (j in projectsList) {
+        if (projectsList[j].uri == URI) {
+          projectsList[j].lang.push(metadata.lang);
+          projectsList[j].desc[metadata.lang] = contentData.content[0];
+          projectsList[j].links[metadata.lang] = contentData.links;
           contentData.content.shift();
-          // contentList[i].content[metadata.lang] = contentData.content;
-          projectsList[i].content[metadata.lang] = contentData.content;
+          projectsList[j].content[metadata.lang] = contentData.content;
+          break;
         }
-        break;
       }
     } else {
       projectsExistsId.push(URI);
