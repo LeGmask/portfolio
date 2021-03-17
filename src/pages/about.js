@@ -115,7 +115,7 @@ class About extends Component {
               >
                 <button>
                   <File />
-                  CV
+                  <Message id="about.card.resume" defaultMessage="Resume" />
                 </button>
               </Link>
               <Link to="/to/github" target="_blank">

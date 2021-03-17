@@ -130,6 +130,11 @@
     "filepath": "src/pages/about.js"
   },
   {
+    "id": "about.card.resume",
+    "defaultMessage": "Resume",
+    "filepath": "src/pages/about.js"
+  },
+  {
     "id": "link.nav.blog",
     "defaultMessage": "Blog",
     "filepath": "src/pages/blog.js"
