@@ -12,7 +12,7 @@
 
 ![image:ShoutBot](https://i.imgur.com/oeHZ7A9.png)
 
-ShoutBot, bridge Discord and Ti-Planet chat
+ShoutBot, a bridge to link Ti-Planet Discord and Ti-Planet chat.
 
 I’m the cocreator of ShoutBot, a discord and Ti-Planet bot to link official Ti-Planet discord and the official chat.
 
