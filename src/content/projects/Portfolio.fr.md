@@ -12,7 +12,7 @@
 
 ![image:Portfolio](https://i.imgur.com/neexUOB.png)
 
-Mon site web/portfolio personnel, mais aussi mon blog ou je peut partager mes aventures.
+Mon site web/portfolio personnel, mais aussi mon blog ou je peux partager mes aventures.
 
 Afin de mettre en avant mes différents projets, et d’avoir un endroit où je peux partager mes différentes aventures notamment à l’aide d’un blog et des pages de projets, j’ai décidé de réaliser mon portfolio.
 
