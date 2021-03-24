@@ -20,14 +20,7 @@ class Home extends Component {
       locale: this.props.locale,
       projects: content.projects,
       blog: content.articles,
-      age: this.getAge(new Date(2003, 2, 27)),
     };
-  }
-
-  getAge(date) {
-    var diff_ms = Date.now() - date.getTime();
-    var age_dt = new Date(diff_ms);
-    return Math.abs(age_dt.getUTCFullYear() - 1970);
   }
 
   render() {
@@ -54,20 +47,19 @@ class Home extends Component {
               <h1>
                 <Message
                   id="home.presentation.welcome"
-                  defaultMessage="Hi! I'm Evann DREUMONT!"
+                  defaultMessage="Evann DREUMONT"
                 />
               </h1>
               <p>
                 <Message
                   id="home.presentation.bio1"
-                  defaultMessage="I'm {age} years old and I'm interested in almost anything that is digital."
-                  values={{ age: this.state.age }}
+                  defaultMessage="Student in final year of high school"
                 />
               </p>
               <p>
                 <Message
                   id="home.presentation.bio2"
-                  defaultMessage=" I also love music, and calculators."
+                  defaultMessage="Passionate about digital technology, but not only..."
                 />
               </p>
             </div>

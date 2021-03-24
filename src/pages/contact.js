@@ -43,7 +43,7 @@ class Contact extends Component {
       <div className="contact">
         <ReactHelmet
           title={translations[this.state.locale]["link.nav.contact"]}
-          description={translations[this.state.locale]["contact.description"]}
+          // description={translations[this.state.locale]["contact.description"]}
           author="Evann DREUMONT"
           keywords={["Contact", "mail", "twitter", "discord"]}
         />
@@ -57,12 +57,12 @@ class Contact extends Component {
               <Message id="link.nav.contact" defaultMessage="Contact" />
             </h1>
           </div>
-          <div className="contact__page__description">
+          {/* <div className="contact__page__description">
             <Message
               id="contact.description"
               defaultMessage="How to reach me"
             />
-          </div>
+          </div> */}
         </div>
         <div className="contact__container">
           <div className="contact__container__top">

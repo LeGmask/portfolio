@@ -4,7 +4,7 @@
   "about.card.bio2": "J'ai ainsi appris à programmer dans différents langages informatiques: HTML, Python et JavaScript, ainsi qu'a manier différents outils afin de faciliter le développement et la mise en production comme Docker, Poetry, Yarn, GitHub ... C'est cela qui m'a permis de contribuer à différents projets open sources, notament une application web pour étudiant mais aussi de créer ce site. J'ai également pour principe de faire le maxium pour chaque projet, tout en évitant dans la mesure du possible le \"code sale\".",
   "about.card.bio3": "Tout mes projets sont dits \"Open Source\" et accessibles pour tous tous sur mon profil GitHub.",
   "about.card.resume": "CV",
-  "about.card.title": "Salut ! C'est Evann DREUMONT !",
+  "about.card.title": "Evann DREUMONT",
   "about.description": "Ici, vous trouverez tout sur moi",
   "about.title": "A propos",
   "blog.description": "Ici, vous trouverez des articles à propos des différents projets numériques auxquels j'ai participé où dont je suis à l'initiative. Vous pourrez y trouver également quelques astuces personnelles !",
@@ -30,10 +30,10 @@
   "footer.language": "Français",
   "home.blog.description": "Par ici, mes dernières aventures et explorations informatiques.",
   "home.blog.title": "Derniers articles sur mon Blog:",
-  "home.presentation.bio1": "J'ai {age} ans et je suis intéréssé par le numérique.",
-  "home.presentation.bio2": "J'aime aussi la musique et les calculatrices.",
+  "home.presentation.bio1": "Élève en classe de terminale",
+  "home.presentation.bio2": "Passionné par le numérique, mais pas que...",
   "home.presentation.welcome": "Salut ! C'est Evann DREUMONT !",
-  "home.projects.description": "J'aime coder différents projets avec comme optique de rendre mes taches ponctuelles plus faciles. Ici vous trouverez les derniers en dates, d'autres sont disponibles dans l'onglet projets !",
+  "home.projects.description": "J'aime coder avec comme optique d'optimiser mes tâches récurrentes. Ici vous trouverez mes derniers projets. D'autres sont disponibles dans l'onglet \"projets\" !",
   "home.projects.tile.builtWith": "Réalisé avec :",
   "home.projects.title": "Derniers projets :",
   "link.nav.about": "À propos",
@@ -47,5 +47,5 @@
   "notFound.story": "Un jour, quelque part dans l'espace...",
   "project.builtWith.subtitle": "les logiciels, frameworks, bibliothèques et services utilisés pour cette création",
   "project.builtWith.title": "Réalisé avec",
-  "projects.description": "Retrouvez certains de mes projets, et une description de chacun d'entre eux"
+  "projects.description": "Échantillon de mes projets"
 }

@@ -25,7 +25,7 @@ class Blog extends Component {
       <div className="blog">
         <ReactHelmet
           title={translations[this.state.locale]["link.nav.blog"]}
-          description={translations[this.state.locale]["blog.description"]}
+          // description={translations[this.state.locale]["blog.description"]}
           author="Evann DREUMONT"
           keywords={["blog", "story", "article"]}
         />
@@ -39,12 +39,12 @@ class Blog extends Component {
               <Message id="link.nav.blog" defaultMessage="Blog" />
             </h1>
           </div>
-          <div className="blog__page__description">
+          {/* <div className="blog__page__description">
             <Message
               id="blog.description"
               defaultMessage="Read about my coding or digital life, sometimes I will also put some personal tips !"
             />
-          </div>
+          </div> */}
         </div>
         <div className="blog__postList">
           {this.state.posts.map(
