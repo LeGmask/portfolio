@@ -14,11 +14,11 @@
 
 ShoutBot, a bridge to link Ti-Planet Discord and Ti-Planet chat.
 
-I’m the cocreator of ShoutBot, a discord and Ti-Planet bot to link official Ti-Planet discord and the official chat.
+Co-creator, with Hayleia, of ShoutBot, a Discord and Ti-Planet bot to link the official Discord server and the site's chat. 
 
-This bot is a full rewrite of an existing project, why a new project? The first project was not at all useable, extendable, and was more about a proof of concept, that’s why with Lesyija we’ve built a fully new project.
+This bot is a rewrite of an existing project, but as it was not very maintainable, and my code was relatively rough, so with Hayleia we decided to start a total rewrite.
 
-That why ShoutBot idea comes, a more efficient version and with a bunch of new features, like latex support Discord side, or self-bot support to increase your total amount of message of the year, and still be the most active user directly from Discord.
+ShoutBot offers an evolved version: more powerful and with more features. For example: latex support on the Discord side, self-bot use (continue to post messages related to your account).
 
 [source code](https://github.com/TI-Planet/ShoutBot)
 [Ti-Planet](https://tiplanet.org/)

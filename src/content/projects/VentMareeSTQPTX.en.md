@@ -14,10 +14,10 @@
 
 <!-- ![image:MyPodcast](https://images-na.ssl-images-amazon.com/images/I/71vCwOUSqRL.png) -->
 
-A weather Skill on the seaside resort of Saint-Quay-Portrieux, in Côtes d'Armor, Region Bretagne, France. 
+A Skill of weather information on Saint-Quay-Portrieux, in Côtes d'Armor Region Brittany France.
 
-This weather skill of the city of Saint-Quay-Portrieux allows you to consult the tide schedule for the day and the next 24 hours, the wind that is currently blowing, as well as the weather forecast for the next day, the wind forecast for the next few hours, the barometric trend, to consult the weather report for the day and the next day with gale warnings, sea state and visibility.
+This weather skill covering the city of Saint-Quay-Portrieux allows you to consult the tide times for the day and the next 24 hours, gives live wind strength, informs about the weather forecast for the next days, etc ...
 
-I created this skill in order to facilitate access to the weather, and more specially as a sailor to get all the information from a single access point without having to browse multiple websites.
+I created this skill because as a sailor I wanted to have a quick and complete overview of the conditions on the water from a single access point.
 
 [view skill](https://alexa-skills.amazon.fr/apis/custom/skills/amzn1.ask.skill.fd54d8b5-4e7e-494d-8d42-aa2b0092faf9/launch)

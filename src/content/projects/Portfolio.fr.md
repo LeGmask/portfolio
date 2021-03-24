@@ -14,11 +14,11 @@
 
 Mon site web/portfolio personnel, mais aussi mon blog ou je peux partager mes aventures.
 
-Afin de mettre en avant mes différents projets, et d’avoir un endroit où je peux partager mes différentes aventures notamment à l’aide d’un blog et des pages de projets, j’ai décidé de réaliser mon portfolio.
+Pour mettre en avant mes différents projets, et partager mes différentes aventures notamment.
 
-C’est donc le fruit de nombreuses heures de design, et de développement que j’ai réalisé celui-ci le tout sans « constructeur de site » comme WordPress ou autre.
+J'ai travaillé sur le design et dévellopé ce site seul, sans « constructeur de site » (type : WordPress ou autre).
 
-Afin de me faciliter la création future de mes pages projets et de mes articles de blog, j’ai décidé d’écrire mes articles à l’aide du langage Markdown, notamment pour sa simplicité. Ces fichiers sont donc parsés lors de la compilation le tout sans aucune intervention sur le code source. M’évitant le tout le travail nécessaire à l’ajout d’une page sur le site. 
+Afin de me faciliter la création future de mes pages projets et de mes articles de blog, j’ai décidé d’écrire ceux-ci à l’aide du langage de balisage [Markdown](https://fr.wikipedia.org/wiki/Markdown). Ces fichiers sont donc parsés lors de la compilation, sans aucune intervention sur le code source, limitant le travail nécessaire à l’ajout d’une page sur le site. 
 
 [code source](https://github.com/LeGmask/portfolio/)
 [site web](https://evann.tech/)

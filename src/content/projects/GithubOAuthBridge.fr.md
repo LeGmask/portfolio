@@ -14,8 +14,8 @@
 
 Transforme une requête OAuth incompréhensible en une parfaite requête OAuth GitHub.
 
-Cette API permet de faire un pont entre l’OAuth Github et une OAuth non compatible. J’ai réalisé ce projet, car l’OAuth Alexa n’était pas fonctionnel avec celle de Github. Il permet donc de transformer cette requête en une requête compréhensible pour l’OAuth GitHub.
+Cette API permet de faire un pont entre l’OAuth Github et une OAuth non compatible. J’ai réalisé ce projet, car l’OAuth Alexa n’était pas fonctionnelle avec celle de Github. Il permet donc de transformer cette requête en une requête compréhensible pour l’OAuth GitHub.
 
-Ce projet est plus un PoC *(Proof of Concept)* qu’un projet près pour de la production. Mais il marche plutôt bien pour mon utilisation :smile:!
+Ce projet, même si il reste à l'état de PoC *(Proof of Concept)*, fonctionne plutôt bien pour l'utilisation que j'en ai :smile:!
 
 [code source](https://github.com/LeGmask/Github-Oauth-bridge)

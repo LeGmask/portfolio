@@ -12,13 +12,13 @@
 
 ![image:Portfolio](https://i.imgur.com/neexUOB.png)
 
-My own website/portfolio. But it's also a blog where I will share my adventures.
+My personal website/portfolio, but also my blog where I can share my adventures.
 
-What about a new way to discover my projects and share all my adventure? Yes, that’s why I’ve built this portfolio. This website is a new place where i will post blog post and projects page, for to all the newcomers that discover me.
+To showcase my different projects, and share my different adventures.
 
-After too much hour of designing and development, I’ve made it, my **own** portfolio without any website maker or any other cheats!
+I worked on the design and developed this site alone, without a "site builder" (type: WordPress or other).
 
-Also in this project I use Markdown dynamically generated at build, with a parser and converted into Json. Why? The fact is that creating a page with react is great and easy, but it takes time, and I don’t have time, so I’ve decided to generate page automatically at build for all my articles or projects. How? At build there a script that is parsing the content folder and generate an adapted Json that the webapp will understand and render in a wonderful page!
+In order to facilitate the future creation of my project pages and blog posts, I decided to write them using the [Markdown](https://fr.wikipedia.org/wiki/Markdown) markup language . These files are parsed during compilation, without any intervention on the source code, limiting the work necessary to add a page on the site. 
 
 [source code](https://github.com/LeGmask/portfolio/)
 [website](https://evann.tech/)

@@ -12,13 +12,13 @@
 
 ![image:Omega](https://i.imgur.com/6vedtxH.png)
 
-Contributor for Omega, a fork of Numworks’ OS, Epsilon. That brings many features.
+Contributor on the Omega project, a fork of the Numworks OS, Epsilon. 
 
-Omega extends Epsilon by adding some features, such as a theme engine, external apps, a periodic table… Omega is for the people who want to add features to the calculator, but cannot because they have been rejected by Numworks (for reasons that are 100% understandable!)
+Omega extends the capabilities of Epsilon by adding many features like a theme engine, external applications, periodic table... Omega is for people who want to add features to the calculator, but can't because they were rejected by Numworks (for totally understandable reasons!).
 
-I’ve joined the Omega team a bit after the beginning of the project, in December 2019. And I’ve done a few things for the project.
+I joined the Omega team shortly after the start of the project, in December 2019, and worked on adding several features to the system.
 
-In particular I’ve made a docker as an easy way to compile. Also I’ve made function settings for native nth root and a least I’ve added support for the infinity symbol. 
+I notably set up a Docker in order to make the compilation easier. I also implemented a parameter for functions to get the n-th roots without going through the toolbox and added support for the infinity symbol. 
 
 [source code](https://github.com/Omega-Numworks/Omega)
 [website](https://getomega.dev/)

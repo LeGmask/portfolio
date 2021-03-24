@@ -12,9 +12,9 @@
 
 ![image:Omega](https://i.imgur.com/4wjfHa3.png)
 
-Contributor for schoolsyst, a web app designed to help students throughout their entire days, from note-taking to grades-managing.
+Contributor schoolsyst, an all-in-one web application to manage grades, homework, schedule and much more.
 
-For schoolsyst I've fixed some bug on the webapp and also find some bug. But most of my work I've done is the electron port of the webapp, because I use a computer everyday in class so a desktop app was more usefull than a simple webapp.
+For schoolsyst, in addition to reporting bugs and implementing fixes. I created the electron *(pc)* port of the web application. Indeed, every day I work in class on my computer and I could not use the web application.
 
 [source code](https://github.com/schoolsyst)
 [website](https://schoolsyst.com/)

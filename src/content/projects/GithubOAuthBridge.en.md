@@ -12,10 +12,10 @@
 
 ![image:GithubOAuthBridge](https://i.imgur.com/bEi7ZO3.png)
 
-Transform none understandable OAuth request into a prefect GitHub OAuth request.
+Turns an incomprehensible OAuth request into a perfect GitHub OAuth request.
 
-This webapp permit to bridge to the GitHub Oauth. The fact is GitHub Oauth wasn’t working with Alexa Skill Oauth, so this bridge permit to transform the Alexa Oauth request to a request that GitHub Oauth will understand.
+This API allows to bridge the gap between the Github OAuth and a non-compatible OAuth. I made this project, because the Alexa OAuth was not functional with the Github one. So it allows to transform this request into an understandable request for the GitHub OAuth.
 
-This is more of a PoC *(Proof of Concept)* than a real production ready project. But it works well for my use case :smile:!
+This project, even if it is still a PoC *(Proof of Concept)*, works pretty well for the use I have :smile:!
 
 [source code](https://github.com/LeGmask/Github-Oauth-bridge)
