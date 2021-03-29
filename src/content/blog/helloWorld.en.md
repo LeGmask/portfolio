@@ -5,7 +5,7 @@
   author: "Evann DREUMONT",
   shortName: "Hello World",
   name: "Hello World - Welcome on my website !",
-  synopsis: "Après 3 mois de travail sur le projet, je suis fière d’annoncer mon portfolio. Une aventure pleines de rebondissement et de superbes découvertes...",
+  synopsis: "After 3 months of work on the project, I am proud to announce my portfolio. An adventure full of twists and turns and great discoveries...",
   lang: "EN",
   image: "https://i.imgur.com/HuiuYGa.png",
 }
