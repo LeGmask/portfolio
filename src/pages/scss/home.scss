@@ -39,11 +39,12 @@
 
       p {
         font-size: 25px;
+        text-align: center;
       }
 
-      p:last-child {
-        text-align: right;
-      }
+      // p:last-child {
+      //   text-align: right;
+      // }
     }
 
     &__profile {
