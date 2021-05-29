@@ -28,7 +28,7 @@ class Redirect extends Component {
         break;
 
       case "mail":
-        window.location.href = "mailto:evann.dreumont@gmail.com";
+        window.location.href = "mailto:hello@evann.tech";
         break;
 
       case "source":
