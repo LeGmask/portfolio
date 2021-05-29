@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 import emoji from "remark-emoji";
 import gfm from "remark-gfm";
 import images from "remark-images";
+import rehypeRaw from "rehype-raw";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { nord } from "react-syntax-highlighter/dist/esm/styles/prism";
 import Tex from "@matejmazur/react-katex";
@@ -30,6 +31,7 @@ const remarkConfig = {
     },
   },
   plugins: [gfm, emoji, images, math],
+  rehypePlugins: [rehypeRaw],
 };
 
 class Markdown extends Component {
@@ -38,7 +40,7 @@ class Markdown extends Component {
       <ReactMarkdown
         renderers={remarkConfig.renderers}
         plugins={remarkConfig.plugins}
-        allowDangerousHtml
+        rehypePlugins={remarkConfig.rehypePlugins}
         className="markdown-body"
       >
         {this.props.children}
