@@ -25,10 +25,8 @@ class Home extends Component {
 
   render() {
     let description = {
-      fr:
-        "Mon site-web/portfolio personel. Découvrez mes différents projets et des post en liens avec le digital",
-      en:
-        "My personal website/portfolio. Discover my differents projects and some story about digital",
+      fr: "Mon site-web/portfolio personel. Découvrez mes différents projets et des post en liens avec le digital",
+      en: "My personal website/portfolio. Discover my differents projects and some story about digital",
     };
     return (
       <main className="home">
