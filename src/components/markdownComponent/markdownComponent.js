@@ -8,8 +8,8 @@ import images from "remark-images";
 import rehypeRaw from "rehype-raw";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { nord } from "react-syntax-highlighter/dist/esm/styles/prism";
-import Tex from "@matejmazur/react-katex";
-import math from "remark-math";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 import "katex/dist/katex.min.css"; // `react-katex` does not import the CSS for you
 
 import "./markdownComponent.scss";
@@ -17,8 +17,6 @@ import "./markdownComponent.scss";
 
 const remarkConfig = {
   renderers: {
-    inlineMath: ({ value }) => <Tex math={value} />,
-    math: ({ value }) => <Tex block math={value} />,
     code: ({ language, value }) => {
       return (
         <SyntaxHighlighter
@@ -30,8 +28,8 @@ const remarkConfig = {
       );
     },
   },
-  plugins: [gfm, emoji, images, math],
-  rehypePlugins: [rehypeRaw],
+  rehypePlugins: [rehypeRaw, rehypeKatex],
+  remarkPlugins: [remarkMath, gfm, emoji, images],
 };
 
 class Markdown extends Component {
@@ -41,6 +39,7 @@ class Markdown extends Component {
         renderers={remarkConfig.renderers}
         plugins={remarkConfig.plugins}
         rehypePlugins={remarkConfig.rehypePlugins}
+        remarkPlugins={remarkConfig.remarkPlugins}
         className="markdown-body"
       >
         {this.props.children}
