@@ -18,7 +18,7 @@ Fin novembre 2020, j’ai eu la terrible idée de ce projet, et est donc décid�
 <center>
 <a href="https://i.imgur.com/RhVJ53j.png" target="_blank">
   <img src="https://i.imgur.com/RhVJ53j.png"
-      alt="Markdown Monster icon"
+      alt="Portfolio design"
       style="border-radius: 10px;" />
 </a>
 </center> 
