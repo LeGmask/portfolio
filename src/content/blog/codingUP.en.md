@@ -20,5 +20,3 @@ The contest was presented in the form of challenges and puzzles around the theme
 # I'm curious, what were the challenges?
 
 The challenges will be published on [Pydéfis](https://pydefis.callicode.fr/), at a rate of 1 per week according to this [schedule](http://codingup.fr/?p=2376). However, if you are curious, you can always look at the challenges from previous years on [Pydéfis](https://pydefis.callicode.fr/).
-
-Translated with www.DeepL.com/Translator (free version)
