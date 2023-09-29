@@ -28,7 +28,7 @@
     "rehype-raw": "^6.1.0",
     "remark-emoji": "^2.2.0",
     "remark-gfm": "^1.0.0",
-    "remark-images": "^3.1.0",
+    "remark-images": "^4.0.0",
     "remark-math": "^5.1.1",
     "web-vitals": "^2.1.2"
   },
